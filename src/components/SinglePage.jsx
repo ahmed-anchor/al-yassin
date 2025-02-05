@@ -4,6 +4,7 @@ import { HeroSection } from './HeroSection';
 import StockIndicator from './StockIndicator';
 import { motion } from 'framer-motion';
 import { Carousel } from './Carousel';
+import { Options } from './Options';
 
 export const SinglePage = () => {
 
@@ -16,6 +17,7 @@ export const SinglePage = () => {
     >
       <HeroSection />
       <StockIndicator />
+      <Options />
       {/* <Carousel /> */}
       {/* <Main /> */}
     </motion.div>
