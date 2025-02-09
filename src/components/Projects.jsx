@@ -129,7 +129,7 @@ export const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 1.4 }}
-          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Laelzar"
+          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Lalezar"
         >
           المواكبة
         </motion.h1>
