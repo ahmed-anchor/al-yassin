@@ -16,10 +16,10 @@ export const SinglePage = () => {
     className="flex flex-col items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]"
     >
       <HeroSection />
-      {/* <StockIndicator /> */}
+      <StockIndicator />
       {/* <Options /> */}
-      {/* <Carousel /> */}
-      {/* <AboutUs /> */}
+      <Carousel />
+      <AboutUs />
       <Projects />
 
     </motion.div>
