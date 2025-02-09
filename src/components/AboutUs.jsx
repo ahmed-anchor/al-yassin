@@ -1,8 +1,10 @@
 import React from 'react'
+import Image from 'next/image';
+import astOne from '../assets/astone.png';
 
 export const AboutUs = () => {
   return (
-    <main className="flex flex-col gap-8 row-start-2 items-center ">
+    <main className="flex flex-col gap-8 row-start-2 items-center">
       <h1 className="text-[35px] sm:text-[46px] Lalezar font-extrabold" >نبذه عنا</h1>
       <article className="flex flex-col gap-4 items-center text-right Zain px-6 sm:px-28 font-bold" >
         <p className="text-[18px] sm:text-[24px] text-[#e4eef3] " >
