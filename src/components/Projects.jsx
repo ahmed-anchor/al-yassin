@@ -5,7 +5,7 @@ import astOne from '../assets/astone.png';
 import astTow from '../assets/asttow.png';
 import astThree from '../assets/astthree.png';
 
-const images = [astOne, astTow, astThree]; // Array of images
+const images = [astOne, astTow, astThree];
 
 export const Projects = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -13,7 +13,7 @@ export const Projects = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
