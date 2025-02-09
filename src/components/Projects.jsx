@@ -21,10 +21,7 @@ export const Projects = () => {
   const nextImageIndex = (currentImageIndex + 1) % images.length;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
+    <div
       className="relative h-[600px] w-full overflow-hidden"
     >
       {/* Current Image */}
@@ -65,8 +62,9 @@ export const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1 }}
-          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Zain"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Lalezar"
         >
                     تركيب المحطات
         </motion.h1>
@@ -74,8 +72,9 @@ export const Projects = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="Lalezar text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="Zain text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
         >
           تقدم مؤسسة الياسين خدماتها للشركات وللمزارعين وأصحاب المزارع في تركيب وتشغيل محطات الري بالطاقة الشمسية بقدرات تبدأ من ١ حصان إلى ٢٥٠ حصان.
         </motion.p>
@@ -84,8 +83,9 @@ export const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Zain"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Lalezar"
         >
           التجارة والتوريد
         </motion.h1>
@@ -94,8 +94,9 @@ export const Projects = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="Lalezar text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="Zain text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
         >
           تقوم الشركة بتوريد أنظمة الطاقة الشمسية في أي مكان في الجمهورية. الشركة تقدم أفضل الأسعار والعروض في جميع المستلزمات سواء على مستوى الأفراد أو التجار، وأيضًا المصانع والشركات.
         </motion.p>
@@ -104,8 +105,9 @@ export const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2 }}
-          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Zain"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1 }}
+          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Lalezar"
         >
           خدمة النقل
         </motion.h1>
@@ -114,8 +116,9 @@ export const Projects = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.5 }}
-          className="Lalezar text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="Zain text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
         >
           الشركة لديها خبرات طويلة في تقديم الخدمات في مجال الطاقة الشمسية. الشركة لديها قدرات وعلاقات خاصة في مجال النقل مما يسهل التوصيل السريع والمضمون والآمن للعملاء في أي وقت.
         </motion.p>
@@ -124,8 +127,9 @@ export const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 3 }}
-          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Zain"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1.4 }}
+          className="text-[#e4eef3] text-right text-2xl sm:text-3xl font-extrabold mb-2 Laelzar"
         >
           المواكبة
         </motion.h1>
@@ -134,12 +138,13 @@ export const Projects = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 3.5 }}
-          className="Lalezar text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1.6 }}
+          className="Zain text-right text-[#e4eef3] text-sm sm:text-base font-medium mb-4"
         >
           تتابع الشركة بشكل دائم كل ما هو جديد في مجال الطاقة أو العدد والآلات مما يسهل تقديم خدماتها لعملائها بشكل عصري وحديث دائمًا. نراجع دائمًا سياساتنا لتطوير أفضل خدمات سواء في مرحلة التفاوض أو البيع أو خدمة ما بعد البيع.
         </motion.p>
       </div>
-    </motion.div>
+    </div>
   );
 };
