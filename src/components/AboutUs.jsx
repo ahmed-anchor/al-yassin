@@ -11,7 +11,7 @@ export const AboutUs = () => {
         height={300}
         alt='nothin here'
         objectFit='cover'
-        className='w-[500px] h-[400px] flex-shrink-0 absolute z-[-1] left-[-40px]'
+        className='w-[500px] h-[400px] flex-shrink-0 absolute z-[-1] left-[-40px] sm:left-[30%]'
       />  
       <article className="flex flex-col gap-4 items-center text-right Zain font-bold" >
         <h1 className="text-[35px] sm:text-[46px] Lalezar font-extrabold" >نبذه عنا</h1>
