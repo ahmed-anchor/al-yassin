@@ -1,3 +1,4 @@
+'use client'
 import { motion, useAnimation } from "framer-motion";
 import { useState, useEffect } from "react";
 import { DropButton } from "./DropButton";
