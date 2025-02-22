@@ -6,7 +6,6 @@ import Lenis from "lenis";
 import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
-  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(()=> {
     const lenis = new Lenis();
@@ -17,10 +16,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  return isMounted ? 
-  <Intro toggle={()=> setIsMounted(false)} /> 
-  :
-  (
+  return (
     <>
       <Navbar />
       <SinglePage />

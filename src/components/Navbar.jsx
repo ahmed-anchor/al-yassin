@@ -53,7 +53,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/products"
               className="block py-3 hover:text-blue-300 text-right font-bold Zain"
             >
               منتجاتنا
@@ -64,7 +64,7 @@ export const Navbar = () => {
               href="#"
               className="block py-3 hover:text-blue-300 text-right font-bold Zain"
             >
-              خدماتنا
+              توصل معنا
             </Link>
           </li>
         </ul>
