@@ -1,10 +1,12 @@
 "use client"
+import { Intro } from "@/components/Intro";
 import { SinglePage } from "@/components/SinglePage";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Lenis from "lenis";
 import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(()=> {
     const lenis = new Lenis();
@@ -15,7 +17,10 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  return (
+  return isMounted ? 
+  <Intro toggle={()=> setIsMounted(false)} /> 
+  :
+  (
     <>
       <Navbar />
       <SinglePage />
