@@ -57,7 +57,7 @@ export const Projects = () => {
       </motion.div>
 
       {/* Black faded layer */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-end justify-center sm:justify-end p-4">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-end justify-center sm:justify-center p-4">
         {/* First Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
