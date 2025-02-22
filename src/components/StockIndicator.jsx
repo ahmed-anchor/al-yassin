@@ -3,18 +3,22 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const StockIndicator = () => {
-  const [isWideScreen, setWideScreen] = useState(window.innerWidth >= 640);
+  const [isWideScreen, setWideScreen] = useState(false); // Initialize with safe value
 
-  // Handle screen resize
+  // Handle screen resize (client-side only)
   useEffect(() => {
+    // Set initial value after mount
+    setWideScreen(window.innerWidth >= 500);
+    
     const handleResize = () => {
       setWideScreen(window.innerWidth >= 500);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Points for the polyline
+  // Points for the polyline (use default until hydration completes)
   const points = isWideScreen ? "20,430 240,140 350,230 500,20" : "20,290 160,110 220,170 320,40";
 
   return (
@@ -86,37 +90,30 @@ const StockIndicator = () => {
             viewport={{ once: true, amount: 0.9 }}
             transition={{ delay: 0.2, duration: 1 }}
           >
-            {/* CountUp Component */}
             <CountUp target={98} />
           </motion.text>
         </motion.svg>
       </motion.div>
 
-      {/* Text */}
+      {/* Text Section */}
       <motion.div
-          initial={{ opacity: 0, x: 0 }}
-          whileInView={{ opacity: 1, x: isWideScreen ? -60 : 0 }}
-          viewport={{ once: true, amount: .1 }}
-          transition={{ delay: 2.1, duration: 0.6, ease: "easeOut" }}
-          className=" flex flex-col items-end justify-evenly h-full"
-        >
-          <h1
-
-            className="text-[28px] sm:text-[40px] relative text-center font-normal Lalezar"
-          >
-            رضا العملاء بالخدمه
-          </h1>
-          <article
-            className="text-[0] sm:text-[24px] relative text-center font-normal Lalezar flex-wrap overflow-clip" 
-          >
-            الثقه و الامانه هو السر 
-          </article>
+        initial={{ opacity: 0, x: 0 }}
+        whileInView={{ opacity: 1, x: isWideScreen ? -60 : 0 }}
+        viewport={{ once: true, amount: .1 }}
+        transition={{ delay: 2.1, duration: 0.6, ease: "easeOut" }}
+        className="flex flex-col items-end justify-evenly h-full"
+      >
+        <h1 className="text-[28px] sm:text-[40px] relative text-center font-normal Lalezar">
+          رضا العملاء بالخدمه
+        </h1>
+        <article className="text-[0] sm:text-[24px] relative text-center font-normal Lalezar flex-wrap overflow-clip">
+          الثقه و الامانه هو السر 
+        </article>
       </motion.div>
     </div>
   );
 };
 
-// CountUp Component (triggers only when in view)
 const CountUp = ({ target }) => {
   const [count, setCount] = useState(0);
 
@@ -127,9 +124,8 @@ const CountUp = ({ target }) => {
       viewport={{ once: true, amount: 0.9 }}
       transition={{ delay: 0.2, duration: 1 }}
       onAnimationStart={() => {
-        // Start the count-up animation when the element enters the viewport
         let start = null;
-        const duration = 2000; // Animation duration in milliseconds
+        const duration = 2000;
 
         const animate = (timestamp) => {
           if (!start) start = timestamp;
