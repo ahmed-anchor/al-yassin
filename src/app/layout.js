@@ -31,7 +31,6 @@ export const metadata = {
   description: "شركة الياسين لمولدات الطاقه الشمسيه و",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir='ltr' >
