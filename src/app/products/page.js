@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import faba from '../../assets/faba.webp'
 
 
 export default function page() {
@@ -7,6 +9,7 @@ export default function page() {
     <div>
       <div>
         <h1>faba</h1>
+        <Image src={faba} alt="faba" width={500} height={500} />
         <p>
           ماسوشهخسيبرنيمنرشسيمنربشسمينربشسيب
         </p>
