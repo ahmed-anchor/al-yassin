@@ -1,11 +1,9 @@
-"use client"; // Mark this as a Client Component
-
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image"; // Use Next.js Image component for optimized images
 
 // Import local images
-import faba from "../assets/faba.png";
+import faba from "../assets/faba.webp";
 import delixi from "../assets/delixi.png";
 import tokal from "../assets/tokal.png";
 

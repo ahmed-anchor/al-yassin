@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import astOne from '../assets/astone.png';
-import astTow from '../assets/asttow.png';
-import astThree from '../assets/astthree.png';
+import astOne from '../assets/astone.webp';
+import astTow from '../assets/asttow.webp';
+import astThree from '../assets/astthree.webp';
 
 const images = [astOne, astTow, astThree];
 
