@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Bangers } from "next/font/google"
 import { Lalezar } from "next/font/google"
-// import { Zain } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +26,6 @@ const lalezar = Lalezar({
   weight: '400',
 })
 
-// const zain = Zain({
-//   subsets: ['latin'],
-//   variable: '--font-zain',
-//   weight: ['200', '400', '700', '800', '900'],
-// })
 
 export const metadata = {
   title: "Al Yassin - الياسين",
@@ -43,7 +37,7 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir='rtl' >
       <body
         className={`bg-[url('../assets/solar-plates.webp')] bg-cover bg-fixed bg-no-repeat overscroll-auto
-          ${geistSans.variable} ${zain.variable} ${bangers.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
+          ${geistSans.variable} ${bangers.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
