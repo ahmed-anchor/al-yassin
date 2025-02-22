@@ -38,7 +38,7 @@ export const Navbar = () => {
         <motion.span
           initial={{ opacity: 0 }} // Initial opacity
           animate={yassinControls} // Use the text animation controls
-          className="Zain font-black text-[29px] sm:text-[34px] myShadow"
+          className="Lalezar font-black text-[29px] sm:text-[34px] myShadow"
         >
           الياسين
         </motion.span>
@@ -46,7 +46,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block py-3 hover:text-blue-300 text-right font-bold Zain"
+              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
             >
               مشاريعنا
             </Link>
@@ -54,7 +54,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="/products"
-              className="block py-3 hover:text-blue-300 text-right font-bold Zain"
+              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
             >
               منتجاتنا
             </Link>
@@ -62,7 +62,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block py-3 hover:text-blue-300 text-right font-bold Zain"
+              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
             >
               توصل معنا
             </Link>
@@ -78,7 +78,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block pr-10 py-4 hover:bg-white hover:text-blue-500 text-right font-bold Zain"
+              className="block pr-10 py-4 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
             >
               مشاريعنا
             </Link>
@@ -86,7 +86,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Zain"
+              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
             >
               منتجاتنا
             </Link>
@@ -94,7 +94,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Zain"
+              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
             >
               خدماتنا
             </Link>

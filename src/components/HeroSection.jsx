@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <h1 className='Lalezar font-extrabold text-[54px] sm:text-[90px] text-right mt-[-100px] pb-[40px]'>
           الياسين
         </h1>
-        <article className="Zain font-extrabold sm:text-[24px] text-right ">
+        <article className="Lalezar font-extrabold sm:text-[24px] text-right ">
           مؤسسة الباسين للتوريدات وهي شركة متخصصه في الطاقة الشمسية وتنفيذ جميع أعمال الطاقة على مستوي وبشكل احترافي وتعمل على تطوير الخدمات التي تقدمها بشكل مستمر بناءً على حاجة العملاء ومتطلبات السوق المصري وتتعامل مع العملاء بكل مصداقية وأمانة فهم شوكاء نجاح مؤسستنا " الباسين لتوريدات
         </article>
 

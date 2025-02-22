@@ -11,7 +11,7 @@ export const Options = () => {
         transition={{ duration: 1, ease: 'easeOut' }}
         viewport={{ once: true }}
        className='text-[26px] sm:text-[40px] font-bold text-center py-5 Lalezar text-[#e4eef3]'>ليه تختارنا</motion.h1>
-      <ul className='flex flex-col sm:flex-row gap-3 justify-around items-center px-2 Zain' >
+      <ul className='flex flex-col sm:flex-row gap-3 justify-around items-center px-2 Lalezar' >
         <li className='bg-[#e4eef3] w-full py-2 rounded-md px-4 sm:w-[200px] lg:w-[280px] text-right h-[150px]' >
           <Link href='#'>
             <h1 className="text-[21px] pb-2 font-bold" >المصداقية</h1>
