@@ -35,14 +35,15 @@ export const Navbar = () => {
       className="w-full flex flex-col top-0 fixed bg-[#e4eef3] z-50"
     >
       <div className="flex justify-around items-center w-full h-[70px]">
-        {/* Animated "الياسين" text */}
-        <motion.span
-          initial={{ opacity: 0 }} // Initial opacity
-          animate={yassinControls} // Use the text animation controls
-          className="Lalezar font-black text-[29px] sm:text-[34px] myShadow"
-        >
-          الياسين
-        </motion.span>
+        <Link href='/'>
+          <motion.span
+            initial={{ opacity: 0 }} // Initial opacity
+            animate={yassinControls} // Use the text animation controls
+            className="Lalezar font-black text-[29px] sm:text-[34px] myShadow"
+          >
+            الياسين
+          </motion.span>
+        </Link>
         <ul className="px-2 bg-[#e4eef3]  sm:flex gap-4 justify-between items-center hidden sm:w-[200px] md:w-[250px] ">
           <li>
             <Link
