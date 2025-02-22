@@ -4,7 +4,6 @@ import Image from "next/image"; // Use Next.js Image component for optimized ima
 import faba from "../assets/faba.webp";
 import delixi from "../assets/delixi.png";
 import tokal from "../assets/tokal.png";
-
 // Sample data for the carousel
 const carouselItems = [
   {

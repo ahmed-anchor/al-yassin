@@ -78,15 +78,15 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block pr-10 py-4 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
+              className="block pr-10 py-4 hover:text-blue-500 text-right font-bold Lalezar"
             >
               مشاريعنا
             </Link>
           </li>
           <li>
             <Link
-              href="#"
-              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
+              href="/products"
+              className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
             >
               منتجاتنا
             </Link>
@@ -94,7 +94,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="block pr-10 py-2 hover:bg-white hover:text-blue-500 text-right font-bold Lalezar"
+              className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
             >
               خدماتنا
             </Link>

@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Bangers } from "next/font/google"
-import { Lalezar } from "next/font/google"
+import { Bangers, Lalezar } from "next/font/google"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,17 +25,17 @@ const lalezar = Lalezar({
   weight: '400',
 })
 
-
 export const metadata = {
   title: "Al Yassin - الياسين",
   description: "شركة الياسين لمولدات الطاقه الشمسيه و",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir='rtl' >
       <body
-        className={`bg-[url('../assets/solar-plates.webp')] bg-cover bg-fixed bg-no-repeat overscroll-auto
+        className={`bg-[url('../assets/solar-plates.webp')] bg-cover bg-fixed bg-no-repeat
           ${geistSans.variable} ${bangers.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
       >
         {children}
