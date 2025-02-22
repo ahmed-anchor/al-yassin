@@ -1,5 +1,4 @@
 "use client"
-import { Intro } from "@/components/Intro";
 import { SinglePage } from "@/components/SinglePage";
 import { useState, useEffect } from "react";
 import Lenis from "lenis";
@@ -16,10 +15,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  return isMounted ? 
-  <Intro toggle={()=> setIsMounted(false)} /> 
-  :
-  (
+  return (
     <>
       <SinglePage />
     </>
