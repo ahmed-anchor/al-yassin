@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Bangers, Lalezar } from "next/font/google"
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import yassin from "/assets/al-yassin.jpg";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +30,13 @@ const lalezar = Lalezar({
 export const metadata = {
   title: "Al Yassin - الياسين",
   description: "شركة الياسين لمولدات الطاقه الشمسيه و",
+  openGraph: {
+    title: "Al Yassin - الياسين",
+    description: "شركة الياسين لمولدات الطاقه الشمسيه و",
+    images: [{url: yassin}],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
