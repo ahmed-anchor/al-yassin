@@ -9,7 +9,7 @@ export const HeroSection = () => {
       transition={{delay: .4, duration: 1, ease: 'easeOut' }}
       className='flex flex-col just-content-center w-full items-center h-fit bg-[#00000065] text-[#e4eef3]'
     >
-      <div className='flex flex-col items-end justify-center w-full h-screen px-6 sm:px-20'>
+      <div className='flex flex-col items-end justify-center w-full h-[50vh] mt-28 px-6 sm:px-20'>
 
         <h1 className='Lalezar font-extrabold text-[54px] sm:text-[90px] text-right mt-[-100px] pb-[40px]'>
           الياسين

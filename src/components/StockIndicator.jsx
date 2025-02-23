@@ -1,8 +1,7 @@
-'use client'
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const StockIndicator = () => {
+export const StockIndicator = () => {
   const [isWideScreen, setWideScreen] = useState(false); // Initialize with safe value
 
   // Handle screen resize (client-side only)
@@ -145,5 +144,3 @@ const CountUp = ({ target }) => {
     </motion.tspan>
   );
 };
-
-export default StockIndicator;

@@ -10,8 +10,7 @@ export const AboutUs = () => {
         width={300}
         height={300}
         alt='nothin here'
-        objectFit='cover'
-        className='w-[500px] h-[400px] flex-shrink-0 absolute z-[-1] sm:left-[30%]'
+        className='w-[500px] h-[400px] flex-shrink-0 absolute z-[-1] sm:left-[30%] object-cover'
       />  
       <article className="flex flex-col gap-4 px-3 items-center text-center Lalezar font-bold" >
         <h1 className="text-[35px] sm:text-[46px] Lalezar font-extrabold" >نبذه عنا</h1>

@@ -1,0 +1,48 @@
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
+import faba from "../assets/pipes/faba-pipe.webp";
+import tokal from "../assets/pipes/tokal-pipe.webp";
+import baharia from "../assets/solar-plates/baharia.webp";
+import monira from "../assets/solar-plates/el-monira.webp";
+
+const products = [
+  faba,
+  baharia,
+  tokal,
+  monira,
+  faba,
+  baharia,
+];
+
+export function Products() {
+  const containerRef = useRef(null);
+
+  return (
+    <div className="relative w-full overflow-hidden py-8 bg-[#00000065] scrollbar-hide">
+      <motion.div
+        ref={containerRef}
+        className="flex gap-4 w-max overflow-hidden"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "loop" }}
+      >
+        {[...products, ...products].map((src, index) => (
+          <motion.div
+            key={index}
+            className="relative aspect-square w-64 flex-shrink-0 overflow-hidden rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Image
+              src={src}
+              alt={`Product ${index + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}

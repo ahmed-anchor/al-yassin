@@ -76,8 +76,8 @@ export const Navbar = () => {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <ul className="py-2 w-full shadow-lg bg-[#e4eef3]">
-          <li>
+        <ul className="py-2 sm:hidden w-full shadow-lg bg-[#e4eef3]">
+          <li onClick={() => setOpen(prev=>!prev)}>
             <Link
               href="#"
               className="block pr-10 py-4 hover:text-blue-500 text-right font-bold Lalezar"
@@ -85,7 +85,7 @@ export const Navbar = () => {
               مشاريعنا
             </Link>
           </li>
-          <li>
+          <li onClick={() => setOpen(prev=>!prev)}>
             <Link
               href="/products"
               className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
@@ -93,7 +93,7 @@ export const Navbar = () => {
               منتجاتنا
             </Link>
           </li>
-          <li>
+          <li onClick={() => setOpen(prev=>!prev)}>
             <Link
               href="#"
               className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
