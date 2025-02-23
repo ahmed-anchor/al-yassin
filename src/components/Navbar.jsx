@@ -50,7 +50,7 @@ export const Navbar = () => {
               href="/projects"
               className="block py-3 hover:text-blue-300 text-center font-bold Lalezar"
             >
-              خدماتنا
+              مشاريعنا
             </Link>
           </li>
           <li>
@@ -87,10 +87,18 @@ export const Navbar = () => {
         <ul className="py-2 sm:hidden w-full shadow-lg bg-[#e4eef3]">
           <li onClick={() => setOpen(prev=>!prev)}>
             <Link
+              href="/contact"
+              className=" block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
+            >
+              تواصل معنا
+            </Link>
+          </li>
+          <li onClick={() => setOpen(prev=>!prev)}>
+            <Link
               href="/projects"
               className="block pr-10 py-4 hover:text-blue-500 text-right font-medium Lalezar"
             >
-              خدماتنا
+              مشاريعنا
             </Link>
           </li>
           <li onClick={() => setOpen(prev=>!prev)}>
@@ -99,14 +107,6 @@ export const Navbar = () => {
               className="block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
             >
               منتجاتنا
-            </Link>
-          </li>
-          <li onClick={() => setOpen(prev=>!prev)}>
-            <Link
-              href="/contact"
-              className=" block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
-            >
-              تواصل معنا
             </Link>
           </li>
           <li onClick={() => setOpen(prev=>!prev)}>
