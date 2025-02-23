@@ -35,7 +35,7 @@ export const Navbar = () => {
       className="w-full flex flex-col top-0 fixed bg-[#e4eef3] z-50"
     >
       <div className="flex justify-around items-center w-full h-[70px]">
-        <Link href='/'>
+        <Link onClick={() => setOpen(false)} href='/'>
           <motion.span
             initial={{ opacity: 0 }} // Initial opacity
             animate={yassinControls} // Use the text animation controls
