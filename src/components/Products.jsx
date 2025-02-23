@@ -5,6 +5,7 @@ import faba from "../assets/pipes/faba-pipe.webp";
 import tokal from "../assets/pipes/tokal-pipe.webp";
 import baharia from "../assets/solar-plates/baharia.webp";
 import monira from "../assets/solar-plates/el-monira.webp";
+import Link from "next/link";
 
 const products = [
   faba,
@@ -19,7 +20,9 @@ export function Products() {
   const containerRef = useRef(null);
 
   return (
-    <div className="relative w-full overflow-hidden py-8 bg-[#00000065] scrollbar-hide">
+    <Link
+    href='/products'
+    className="relative w-full overflow-hidden py-8 bg-[#00000065] scrollbar-hide">
       <motion.div
         ref={containerRef}
         className="flex gap-4 w-max overflow-hidden"
@@ -43,6 +46,6 @@ export function Products() {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </Link>
   );
 }
