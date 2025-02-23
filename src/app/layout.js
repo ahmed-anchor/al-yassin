@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Al Yassin - الياسين",
     description: "شركة الياسين لمولدات الطاقه الشمسيه و",
-    images: [{url: "../assets/al-yassin.jpg"}],
+    images: [{url: "https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/415991490_884398176712010_5415645002089561395_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=i3-j4__ohswQ7kNvgGlVd3P&_nc_oc=Adh-bNyYEGqdRSRi7EdKq4TETdV_kqOsyWQqaAirUhLFalNrSjWK8iONG81cBGxzGr4&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=AG1fvMYBWWDzOM3T0LnBA-x&oh=00_AYA1fO7S2opKYWRoWirr6zCEtF4IqflUR_-PwHSEaCfD8Q&oe=67C170A0"}],
   },
 };
 
