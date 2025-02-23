@@ -4,17 +4,10 @@ import products2 from '../assets/products2.png';
 
 export const AboutUs = () => {
   return (
-    <main className="flex flex-col lg:flex-row gap-8 row-start-2 items-center bg-[#0000007d] px-3 py-32 sm:px-24 sm:py-28">
-      <Image 
-        src={products2} 
-        width={300}
-        height={300}
-        alt='nothin here'
-        className='w-[500px] h-[400px] flex-shrink-0 absolute z-[-1] sm:left-[30%] object-cover'
-      />  
-      <article className="flex flex-col gap-4 px-3 items-center text-center Lalezar font-bold" >
-        <h1 className="text-[35px] sm:text-[46px] Lalezar font-extrabold" >نبذه عنا</h1>
-        <p className="text-[18px] lg:text-[24px] md:text-[20px] text-[#e4eef3] " >
+    <main className="flex flex-col lg:flex-row gap-8 row-start-2 items-center bg-[#0000007d] px-3 py-24 sm:px-24 sm:py-28">
+      <article className="flex flex-col gap-4 px-3 items-center text-center Lalezar" >
+        <h1 className="text-[35px] sm:text-[46px] Lalezar font-extrabold text-[#e4eef3]" >نبذه عنا</h1>
+        <p className="text-[16px] lg:text-[24px] md:text-[20px] text-[#e4eef3] font-medium" >
         مؤسسة الياسين للتوريدات وهي شركة متخصصه ف الطاقه الشمسية وتنفيذ جميع اعمال الطاقه ع اعلي مستوي وبشكل احترافي وتعمل علي تطوير الخدمات التي تقدمها بشكل مستمر بناءا علي حاجه العملاء ومتطلبات السوق المصري وتتعامل مع العملاء بكل مصداقية وامانة فهم شركاء نجاح مؤسستنا " الياسين لتوريدات "
 كما ان شركتنا تمتلك افضل المهندسين والكوادر الفنيه الذين يمتلكون الخبره بجانب المهاره والاحترافية وتستخدم افضل الموارد والمعدات الحديثه التي تجعلها الافضل بلا منازع وهذا ما ساعدنا ع كسب ثقة جميع عملائنا بفضل الله
 السير نحو النجاح
