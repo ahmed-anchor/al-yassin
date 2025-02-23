@@ -48,13 +48,13 @@ export const Carousel = () => {
   }, [controls]);
 
   return (
-    <div className="relative w-full overflow-hidden pt-10 pb-20 bg-[#17323936]">
+    <div className="relative w-full overflow-hidden pt-10 pb-20 bg-[#0000007d]">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{once: true}}
         transition={{ duration: 0.6 }}
-        className="text-3xl text-center text-white font-bold Lalezar pb-5 pt-6"
+        className="text-3xl text-center text-white font-bold Lalezar pb-12"
       >
         الشركة وكيل ل
       </motion.h2>

@@ -24,10 +24,10 @@ export const Footer = () => {
           {/* Social Media */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold Lalezar border-b-2 border-[#6094d3] pb-2">
-              وسائل التواصل
+              الصفحه الرسميه
             </h2>
             <a 
-              href="https://www.facebook.com" 
+              href="https://www.facebook.com/profile.php?id=100054255079858&sk=about"
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 justify-end text-[#333] hover:text-[#6094d3] transition-colors"
