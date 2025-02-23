@@ -22,7 +22,12 @@ export function Products() {
   return (
     <Link
     href='/products'
-    className="relative w-full overflow-hidden py-8 bg-[#00000065] scrollbar-hide">
+    className="relative w-full overflow-hidden pb-28 pt-4 bg-[#00000065] scrollbar-hide">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: .6 }}
+        className="text-4xl text-center text-white font-bold Lalezar pb-8">منتجاتنا</motion.h2>
       <motion.div
         ref={containerRef}
         className="flex gap-4 w-max overflow-hidden"

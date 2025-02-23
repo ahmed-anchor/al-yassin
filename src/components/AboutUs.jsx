@@ -4,7 +4,7 @@ import products2 from '../assets/products2.png';
 
 export const AboutUs = () => {
   return (
-    <main className="flex flex-col lg:flex-row gap-8 row-start-2 items-center bg-[#0000007d] p-6 sm:px-24 sm:py-28">
+    <main className="flex flex-col lg:flex-row gap-8 row-start-2 items-center bg-[#0000007d] px-3 py-32 sm:px-24 sm:py-28">
       <Image 
         src={products2} 
         width={300}

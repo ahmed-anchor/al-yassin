@@ -43,7 +43,16 @@ export const Carousel = () => {
   }, [controls]);
 
   return (
-    <div className="relative w-full overflow-hidden py-5 bg-[#17323936]">
+    <div className="relative w-full overflow-hidden py-12 bg-[#17323936]">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{once: true}}
+        transition={{ duration: 0.6 }}
+        className="text-3xl text-center text-white font-bold Lalezar pb-5 pt-6"
+      >
+        الشركة كيل ل
+      </motion.h2>
       <motion.div
         ref={carouselRef}
         className="flex"
