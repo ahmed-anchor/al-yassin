@@ -11,8 +11,8 @@ import veichi from '../../assets/inverter/veichi-inverter.webp'
 import himel from '../../assets/inverter/himel-inverter.webp'
 
 const products = [
-  { id: 1, name: 'أنبوب فابا', description: 'حلول أنابيب صناعية عالية الجودة', image: faba },
-  { id: 2, name: 'أنبوب توكال', description: 'أنظمة أنابيب متينة لاستخدامات البناء', image: tokal },
+  { id: 1, name: 'ماسورة فابا', description: 'مواسير صناعية عالية الجودة', image: faba },
+  { id: 2, name: 'ماسورة توكال', description: 'مواسير متينة لاستخدامات البناء', image: tokal },
   { id: 3, name: 'محرك ماكس', description: 'محركات صناعية عالية الأداء', image: maxmotor },
   { id: 4, name: 'محول ديلكسى', description: 'أنظمة تحويل طاقة موفرة للطاقة', image: delexi },
   { id: 5, name: 'محول إنفيت', description: 'تقنية متقدمة لتحويل التردد', image: invt },

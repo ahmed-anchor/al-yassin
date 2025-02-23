@@ -11,12 +11,12 @@ import wadi20 from '../../assets/solar-plates/el-wadi-20.webp'
 
 const projects = [
   {
-    title: "مشروع الأشر",
+    title: "مشروع العاشر من رمضان",
     description: "تركيب ألواح طاقة شمسية بمنطقة الأشر",
     image: esher
   },
   {
-    title: "مشروع العاشر",
+    title: "مشروع العاشر من رمضان",
     description: "إنشاء محطة اوف جريد بقدرة 8,880 كيلو وات في العاشر من رمضان",
     image: asher
   },
@@ -26,7 +26,7 @@ const projects = [
     image: baharia
   },
   {
-    title: "مشروع الخارجة",
+    title: "مشروع الخارجية",
     description: "إنشاء محطة طاقة شمسية بقدرة 20 كيلو وات في الخارجه",
     image: khargia
   },

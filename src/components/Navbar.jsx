@@ -50,7 +50,7 @@ export const Navbar = () => {
               href="/projects"
               className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
             >
-              مشاريعنا
+              خدماتنا
             </Link>
           </li>
           <li>
@@ -82,7 +82,7 @@ export const Navbar = () => {
               href="/projects"
               className="block pr-10 py-4 hover:text-blue-500 text-right font-bold Lalezar"
             >
-              مشاريعنا
+              خدماتنا
             </Link>
           </li>
           <li onClick={() => setOpen(prev=>!prev)}>
