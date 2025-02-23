@@ -4,6 +4,7 @@ import Image from "next/image"; // Use Next.js Image component for optimized ima
 import faba from "../assets/faba.webp";
 import delixi from "../assets/delixi.png";
 import tokal from "../assets/tokal.png";
+import jasolar from "../assets/ja-solar.webp";
 // Sample data for the carousel
 const carouselItems = [
   {
@@ -17,6 +18,10 @@ const carouselItems = [
   {
     id: 3,
     image: tokal,
+  },
+  {
+    id: 4,
+    image: jasolar,
   },
 ];
 
@@ -61,7 +66,7 @@ export const Carousel = () => {
         {duplicatedItems.map((item, index) => (
           <div
             key={`${item.id}-${index}`}
-            className="flex-shrink-0 sm:w-[280px] sm:h-[120px] w-[200px] h-[100px] mx-12 sm:mx-28" // Bigger gap (mx-10) and fixed size
+            className="flex-shrink-0 sm:w-[310px] sm:h-[120px] w-[250px] h-[100px] mx-9 sm:mx-24" // Bigger gap (mx-10) and fixed size
           >
             <Image
               src={item.image}

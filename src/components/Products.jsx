@@ -1,19 +1,29 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import Link from "next/link";
 import faba from "../assets/pipes/faba-pipe.webp";
 import tokal from "../assets/pipes/tokal-pipe.webp";
-import baharia from "../assets/solar-plates/baharia.webp";
-import monira from "../assets/solar-plates/el-monira.webp";
-import Link from "next/link";
+import jasolar from "../assets/solar-plates/ja-solar-plate.webp";
+import jingo from "../assets/solar-plates/jingo-plate.webp";
+import trina from "../assets/solar-plates/trina-solar.webp";
+import max_motor from "../assets/motors/max-motor.webp";
+import delexi from "../assets/inverter/delexi-inverter.webp";
+import himel from "../assets/inverter/himel-inverter.webp";
+import invt from "../assets/inverter/invt-inverter.webp";
+import veichi from "../assets/inverter/veichi-inverter.webp";
 
 const products = [
   faba,
-  baharia,
+  trina,
   tokal,
-  monira,
-  faba,
-  baharia,
+  veichi,
+  jasolar,
+  delexi,
+  jingo,
+  himel,
+  max_motor,
+  invt,
 ];
 
 export function Products() {
