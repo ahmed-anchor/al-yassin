@@ -8,7 +8,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: .6, ease: 'easeOut' }}
-        className='flex flex-col items-end justify-center w-full h-[50vh] mt-32 px-6 sm:px-20'>
+        className='flex flex-col items-end justify-center w-full h-[98vh]  px-6 sm:px-20'>
 
         <h1 className='Lalezar font-extrabold text-[44px] sm:text-[90px] text-right mt-[-100px] pb-[15px]'>
           الياسين

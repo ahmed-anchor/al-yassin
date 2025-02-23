@@ -4,6 +4,7 @@ import Image from 'next/image';
 import astOne from '../assets/astone.webp';
 import astTow from '../assets/asttow.webp';
 import astThree from '../assets/astthree.webp';
+import Link from 'next/link';
 
 const images = [astOne, astTow, astThree];
 
@@ -21,7 +22,8 @@ export const Projects = () => {
   const nextImageIndex = (currentImageIndex + 1) % images.length;
 
   return (
-    <div
+    <Link
+      href='/projects'
       className="relative h-[600px] w-full overflow-hidden"
     >
       {/* Current Image */}
@@ -57,8 +59,17 @@ export const Projects = () => {
       </motion.div>
 
       {/* Black faded layer */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-end justify-center sm:justify-center p-4">
+      <div className="absolute w-full inset-0 bg-black bg-opacity-50 flex flex-col items-end justify-center sm:justify-center p-4">
         {/* First Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="text-[#e4eef3] text-5xl sm:text-6xl font-extrabold mb-6 Lalezar"
+        >
+          مشاريعنا
+        </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,6 +156,6 @@ export const Projects = () => {
           تتابع الشركة بشكل دائم كل ما هو جديد في مجال الطاقة أو العدد والآلات مما يسهل تقديم خدماتها لعملائها بشكل عصري وحديث دائمًا. نراجع دائمًا سياساتنا لتطوير أفضل خدمات سواء في مرحلة التفاوض أو البيع أو خدمة ما بعد البيع.
         </motion.p>
       </div>
-    </div>
+    </Link>
   );
 };

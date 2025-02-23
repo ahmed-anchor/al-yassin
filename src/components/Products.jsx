@@ -22,7 +22,7 @@ export function Products() {
   return (
     <Link
     href='/products'
-    className="relative w-full overflow-hidden pb-28 pt-4 bg-[#00000065] scrollbar-hide">
+    className="relative w-full overflow-hidden pb-32 pt-16 bg-[#00000065] scrollbar-hide">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

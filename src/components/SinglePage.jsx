@@ -12,10 +12,10 @@ export const SinglePage = () => {
       className="flex flex-col items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]"
     >
       <HeroSection />
-      <Products />
       <Projects />
-      <AboutUs />
+      <Products />
       <StockIndicator />
+      <AboutUs />
       <Carousel />
       {/* <Options /> */}
 
