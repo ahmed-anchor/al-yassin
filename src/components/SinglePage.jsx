@@ -4,6 +4,7 @@ import { Carousel } from './Carousel';
 import { AboutUs } from './AboutUs';
 import { Projects } from './Projects';
 import { Products } from './Products';
+import { Footer } from './Footer';
 
 export const SinglePage = () => {
 
@@ -17,8 +18,7 @@ export const SinglePage = () => {
       <StockIndicator />
       <AboutUs />
       <Carousel />
-      {/* <Options /> */}
-
+      <Footer />
     </div>
   )
 };

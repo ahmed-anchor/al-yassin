@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image';
-import products2 from '../assets/products2.png';
 
 export const AboutUs = () => {
   return (

@@ -48,7 +48,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="/projects"
-              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
+              className="block py-3 hover:text-blue-300 text-center font-bold Lalezar"
             >
               خدماتنا
             </Link>
@@ -56,7 +56,7 @@ export const Navbar = () => {
           <li>
             <Link
               href="/products"
-              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
+              className="block py-3 hover:text-blue-300 text-center font-bold Lalezar"
             >
               منتجاتنا
             </Link>
@@ -64,9 +64,17 @@ export const Navbar = () => {
           <li>
             <Link
               href="/about"
-              className="block py-3 hover:text-blue-300 text-right font-bold Lalezar"
+              className="block py-3 w-14 hover:text-blue-300 text-center font-bold Lalezar"
             >
              نبذه عنا
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="block py-3 w-16 hover:text-blue-300 text-center font-bold Lalezar"
+            >
+             تواصل معنا
             </Link>
           </li>
         </ul>
@@ -80,7 +88,7 @@ export const Navbar = () => {
           <li onClick={() => setOpen(prev=>!prev)}>
             <Link
               href="/projects"
-              className="block pr-10 py-4 hover:text-blue-500 text-right font-bold Lalezar"
+              className="block pr-10 py-4 hover:text-blue-500 text-right font-medium Lalezar"
             >
               خدماتنا
             </Link>
@@ -88,19 +96,28 @@ export const Navbar = () => {
           <li onClick={() => setOpen(prev=>!prev)}>
             <Link
               href="/products"
-              className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
+              className="block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
             >
               منتجاتنا
             </Link>
           </li>
           <li onClick={() => setOpen(prev=>!prev)}>
             <Link
+              href="/contact"
+              className=" block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
+            >
+              تواصل معنا
+            </Link>
+          </li>
+          <li onClick={() => setOpen(prev=>!prev)}>
+            <Link
               href="/about"
-              className="block pr-10 py-2 hover:text-blue-500 text-right font-bold Lalezar"
+              className="block pr-10 py-2 hover:text-blue-500 text-right font-medium Lalezar"
             >
               نبذه عنا
             </Link>
           </li>
+          
         </ul>
       )}
     </motion.nav>
