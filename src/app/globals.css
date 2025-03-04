@@ -9,9 +9,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #dee9ee;
+    --foreground: #6094d3;
   }
+}
+
+.Bangers {
+  font-family: var(--font-bangers);
+}
+
+
+.myShadow {
+  text-shadow: 1px 1px .1px rgba(0, 83, 172, 0.397);
+}
+
+.Lalezar {
+  font-family: var(--font-lalezar);
 }
 
 body {
