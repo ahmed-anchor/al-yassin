@@ -6,6 +6,7 @@ import { AboutUs } from './AboutUs';
 import { Projects } from './Projects';
 import { Products } from './Products';
 import { Footer } from './Footer';
+import { useEffect } from 'react';
 import Lenis from 'lenis';
 
 export const SinglePage = () => {
