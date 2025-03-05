@@ -1,7 +1,5 @@
 import React from 'react';
 import { login, getSession, changeCredentials } from '../../../lib/lib';
-import connectDB from '../../../lib/database';
-import UserModel from '../../../models/userModel';
 import { redirect } from 'next/navigation';
 
 export default async function AdminPage() {
@@ -34,7 +32,7 @@ export default async function AdminPage() {
       className='w-full p-2 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 mb-4 md:mb-6'
       required 
     />
-    <button 
+      <button 
       type='submit'
       className='w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-sm transition-colors duration-200 text-sm md:text-base'
     >
@@ -69,7 +67,7 @@ export default async function AdminPage() {
       className='w-full p-2 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 md:mb-6'
       required 
     />
-    <button 
+      <button 
       type='submit'
       className='w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-sm transition-colors duration-200 text-sm md:text-base'
     >

@@ -1,25 +1,46 @@
 import { NextResponse } from "next/server"
 import connectDB from "../../../../lib/database"
 import UserModel from "../../../../models/userModel";
+import { cookies } from "next/headers";
 
 
 
-export async function GET() {
+export async function POST(req) {
+  
   try {
+    const body = await req.json();
+    console.log(body)
+
+    const {phoneNumber, username} = body
+
     await connectDB();
+    
+    const usersData = await UserModel.findOneAndUpdate(
+      {phoneNumber: phoneNumber},
+      { $set: {username: username} },
+      { new: true, upsert: true, runValidators: true }
+    )
 
-    const usersData = await UserModel.find()
+    if (!usersData) {
+      console.log("No user found with this phone number.");
+      await UserModel.create({
+        phoneNumber: phoneNumber,
+        username: username
+      })
+    }
 
-    return NextResponse.json(usersData)
+    cookies().set('userSession', 'true', { 
+      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 1 month
+      httpOnly: true,
+      sameSite: 'strict'
+    });
+    
+    return NextResponse.json({message: true})
 
-  } catch (error) { 
+  } catch (error) {
     
     console.error(error)
 
-    return NextResponse.error({ message: "Something went wrong" })
+    return NextResponse.error({ message: false })
   }
-}
-
-export async function POST() {
-  return NextResponse.json({ message: "Hello World" })
 }

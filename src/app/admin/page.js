@@ -83,7 +83,7 @@ export default async function AdminPage() {
       className='w-full p-2 mt-4 md:mt-8 lg:mt-12 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2 md:mb-4'
       required 
     />
-    <input 
+    <input
       type='password' 
       placeholder='password' 
       name='password' 

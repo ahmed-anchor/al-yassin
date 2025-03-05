@@ -12,6 +12,10 @@ import delexi from "../assets/inverter/delexi-inverter.webp";
 import himel from "../assets/inverter/himel-inverter.webp";
 import invt from "../assets/inverter/invt-inverter.webp";
 import veichi from "../assets/inverter/veichi-inverter.webp";
+import dc from "../assets/cables/dc.webp";
+import bahhari from "../assets/cables/bahhari.webp";
+import puna from "../assets/motors/puna-motor.webp";
+
 
 const products = [
   faba,
@@ -24,6 +28,9 @@ const products = [
   himel,
   max_motor,
   invt,
+  dc,
+  bahhari,
+  puna,
 ];
 
 export function Products() {
