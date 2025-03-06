@@ -11,13 +11,19 @@ export const Modal = () => {
   const [formData, setFormData] = useState({ username: '', phoneNumber: '' });
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorNum, setErrorNum] = useState(false);
 
   const handleSubmit = async () => {
     setIsLoading(true);
     try {
       const response = await axios.post('/api/user', formData);
       setFormData({ username: '', phoneNumber: '' });
+      if(!response.data) {
+        setErrorNum(true)
+        return
+      }
       window.location.reload();
+
     } catch (error) {
       setIsError(true);
     } finally {
@@ -65,6 +71,16 @@ export const Modal = () => {
               className="bg-red-100 text-red-700 p-3 rounded-lg mb-4 text-sm"
             >
               حدث خطأ أثناء المحاولة، يرجى التأكد من اتصال الإنترنت والمحاولة مرة أخرى
+            </motion.div>
+          )}
+          
+          {errorNum && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="bg-red-100 text-red-700 p-3 rounded-lg mb-4 text-sm"
+            >
+              هذا الرقم غير صالح، يرجى ادخال رقم موثوق
             </motion.div>
           )}
 

@@ -4,12 +4,13 @@ import UserModel from "../../../../models/userModel";
 import { cookies } from "next/headers";
 
 export async function POST(req) {
-  
   try {
     const body = await req.json();
     console.log(body)
 
     const {phoneNumber, username} = body
+
+    if(phoneNumber.length < 11) return NextResponse.json(false)
 
     await connectDB();
     
@@ -18,6 +19,7 @@ export async function POST(req) {
       { $set: {username: username} },
       { new: true, upsert: true, runValidators: true }
     )
+
 
     if (!usersData) {
       await UserModel.create({
@@ -32,12 +34,10 @@ export async function POST(req) {
       sameSite: 'strict'
     });
     
-    return NextResponse.json({message: true})
+    return NextResponse.json(true)
 
   } catch (error) {
-    
-    console.error(error)
 
-    return NextResponse.error({ message: false })
+    return NextResponse.error({ message: 'error with server' })
   }
 }
