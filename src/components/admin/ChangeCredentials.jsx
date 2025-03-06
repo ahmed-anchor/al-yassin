@@ -4,6 +4,9 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Spinner } from '../Spinner'
 import { useRouter } from 'next/navigation'
+import yassin from '../../assets/al-yassin.jpg'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const ChangeCredentials = () => {
   const router = useRouter()
@@ -24,60 +27,121 @@ export const ChangeCredentials = () => {
       if (response.data) {
         setSuccess(true)
         setFormData({ username: '', password: '' })
-        setTimeout(() => router.push('/'), 1000) // Redirect after 2 seconds
+        setTimeout(() => router.push('/'), 1000)
       }
     } catch (error) {
       setIsError(true)
+    } finally {
+      setIsLoading(false)
     }
   }
 
   return (
-    <div className="w-full min-h-screen p-4 lg:p-8 bg-white flex flex-col items-center justify-center pt-16 md:pt-24 lg:pt-32">
+    <div className="w-full min-h-screen p-4 bg-gray-100 flex flex-col items-center justify-center">
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', stiffness: 100 }}
+        className="mb-8"
+      >
+        <Image
+          src={yassin}
+          alt="Al Yassin"
+          width={120}
+          height={120}
+          className="rounded-full border-4 border-white shadow-xl"
+          priority
+        />
+      </motion.div>
+
       {isLoading ? (
         <Spinner />
       ) : isError ? (
-        <div className='w-full max-w-md p-4 bg-red-100 rounded-lg text-center mb-4'>
-          <h1 className='text-xl text-red-600'>Update failed. Please try again.</h1>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="w-full max-w-md p-4 bg-red-100 rounded-lg text-center mb-4"
+        >
+          <h1 className='text-xl text-red-600'>فشل التحديث، يرجى المحاولة مرة أخرى</h1>
+        </motion.div>
       ) : success ? (
-        <div className='w-full max-w-md p-4 bg-green-100 rounded-lg text-center mb-4'>
-          <h1 className='text-xl text-green-600'>Credentials updated successfully!</h1>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="w-full max-w-md p-4 bg-green-100 rounded-lg text-center mb-4"
+        >
+          <h1 className='text-xl text-green-600'>تم تحديث البيانات بنجاح!</h1>
+        </motion.div>
       ) : (
-        <>
-          <h1 className='text-2xl font-semibold capitalize text-green-800 mb-8'>
-            Add your new credentials
-          </h1>
-          <form
-            className='w-full max-w-xs md:max-w-sm lg:max-w-md h-auto min-h-[400px] md:min-h-[500px] bg-green-300 rounded-lg p-4 md:p-6 lg:p-8 space-y-4 md:space-y-6 lg:space-y-8'
-            onSubmit={handleSubmit}
+        <motion.form
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg space-y-6"
+          onSubmit={handleSubmit}
+        >
+          <div className="text-center mb-6">
+            <h1 className="text-2xl font-bold text-gray-800">تحديث بيانات الدخول</h1>
+            <p className="text-sm text-gray-600 mt-2">
+              يرجى إدخال بيانات الاعتماد الجديدة بعناية
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
           >
             <input 
               type='text' 
-              placeholder='username' 
+              placeholder='اسم المستخدم الجديد' 
               name='username'
-              className='w-full p-2 mt-4 md:mt-8 lg:mt-12 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 mb-2 md:mb-4'
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
+              dir="rtl"
               required
               value={formData.username}
               onChange={e => setFormData({ ...formData, username: e.target.value })}
             />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             <input
               type='password' 
-              placeholder='password' 
+              placeholder='كلمة المرور الجديدة' 
               name='password' 
-              className='w-full p-2 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 mb-4 md:mb-6'
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
+              dir="rtl"
               required
               value={formData.password}
               onChange={e => setFormData({ ...formData, password: e.target.value })}
             />
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
             <button 
               type='submit'
-              className='w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-sm transition-colors duration-200 text-sm md:text-base'
+              className="w-full bg-green-600 text-white p-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
             >
-              Update Credentials
+              تحديث البيانات
             </button>
-          </form>
-        </>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-center text-xs text-gray-500 mt-4"
+          >
+            <p>سيتم تطبيق التغييرات فورًا على جميع أنظمة الدخول</p>
+            <p className="mt-2">نظام التحديث الآمن يعمل بتقنية التشفير الكامل</p>
+          </motion.div>
+        </motion.form>
       )}
     </div>
   )
