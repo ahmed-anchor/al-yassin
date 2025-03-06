@@ -1,6 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Bangers, Lalezar } from "next/font/google"
+import { getUserSession, getAdminSession } from "../../lib/lib";
+import { Modal } from "@/components/Modal";
+import { Navbar } from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,14 +39,18 @@ export const metadata = {
 };
 
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const userSession = await getUserSession();
+  const adminSession = await getAdminSession();
   return (
     <html lang="ar" dir='ltr' >
       <body
         className={`bg-[url('../assets/solar-plate2.jpg')] bg-cover bg-fixed bg-bottom
           ${geistSans.variable} ${bangers.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {
+          !userSession && !adminSession? <Modal />: <><Navbar />{children}</>
+        }
       </body>
     </html>
   );

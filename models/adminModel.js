@@ -6,10 +6,14 @@ const adminSchema = Schema({
     required: true,
     unique: true
   },
-  phoneNumber: {
+  password: {
     type: String,
     required: true,
     unique: true
+  },
+  token: {
+    type: String,
+    required: true,
   }
 });
 

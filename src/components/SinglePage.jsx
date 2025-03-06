@@ -6,18 +6,12 @@ import { AboutUs } from './AboutUs';
 import { Projects } from './Projects';
 import { Products } from './Products';
 import { Footer } from './Footer';
-import { useEffect, useState } from 'react';
-import { Navbar } from './Navbar';
+import { useEffect } from 'react';
 import Lenis from 'lenis';
-import { Modal } from './Modal';
 
-export const SinglePage = ({ userSession }) => {
-  const [isLogged, setIsLogged] = useState(false)
+export const SinglePage = () => {
 
-  
-  
   useEffect(()=> {
-  if(userSession) setIsLogged(true)
     const lenis = new Lenis();
     function raf(time) {
       lenis.raf(time);
@@ -28,24 +22,16 @@ export const SinglePage = ({ userSession }) => {
 
 
   return (
-    <>
-      {
-        isLogged?
-      <div
-        className="flex flex-col items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]"
-      >
-        <Navbar />
-
-        <HeroSection />
-        <Projects />
-        <Products />
-        <StockIndicator />
-        <AboutUs />
-        <Carousel />
-        <Footer />
-      </div>:
-      (userSession?'':<Modal clearModal={()=>setIsLogged(true)} />)
-      }
-    </>
+    <div
+      className="flex flex-col items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]"
+    >
+      <HeroSection />
+      <Projects />
+      <Products />
+      <StockIndicator />
+      <AboutUs />
+      <Carousel />
+      <Footer />
+    </div>
   )
 };

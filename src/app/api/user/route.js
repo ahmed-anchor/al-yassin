@@ -3,8 +3,6 @@ import connectDB from "../../../../lib/database"
 import UserModel from "../../../../models/userModel";
 import { cookies } from "next/headers";
 
-
-
 export async function POST(req) {
   
   try {
@@ -22,7 +20,6 @@ export async function POST(req) {
     )
 
     if (!usersData) {
-      console.log("No user found with this phone number.");
       await UserModel.create({
         phoneNumber: phoneNumber,
         username: username
@@ -30,7 +27,7 @@ export async function POST(req) {
     }
 
     cookies().set('userSession', 'true', { 
-      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 1 month
+      expires: new Date(Date.now() + 3 * 30 * 24 * 60 * 60 * 1000), // 3 month
       httpOnly: true,
       sameSite: 'strict'
     });

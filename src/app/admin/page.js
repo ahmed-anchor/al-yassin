@@ -1,8 +1,9 @@
 import React from 'react';
-import { login, getSession } from '../../../lib/lib';
+import { getSession } from '../../../lib/lib';
 import connectDB from '../../../lib/database';
 import UserModel from '../../../models/userModel';
 import Link from 'next/link';
+import { AdminForm } from '@/components/admin/AdminForm';
 
 export default async function AdminPage() {
   const session = await getSession();
@@ -59,45 +60,12 @@ export default async function AdminPage() {
       )
     } catch(error) {
       return (
-        <div className='w-full h-screen bg-red-500'>
+        <div className='w-full h-screen bg-red-500 flex justify-center items-center'>
           <h1 className='text-5xl Lalezar'>Error With Internet</h1>
         </div>
       )
-
     }
   }
 
-  return (
-<div className="w-full min-h-screen p-4 lg:p-8 bg-white flex flex-col items-center justify-center pt-16 md:pt-24 lg:pt-32">
-  <form
-    className='w-full max-w-xs md:max-w-sm lg:max-w-md h-auto min-h-[400px] md:min-h-[500px] bg-blue-300 rounded-lg p-4 md:p-6 lg:p-8 space-y-4 md:space-y-6 lg:space-y-8'
-    action={async (formData) => {
-      'use server';
-      await login(formData);
-    }}
-  >
-    <input 
-      type='text' 
-      placeholder='username' 
-      name='username' 
-      className='w-full p-2 mt-4 md:mt-8 lg:mt-12 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2 md:mb-4'
-      required 
-    />
-    <input
-      type='password' 
-      placeholder='password' 
-      name='password' 
-      className='w-full p-2 rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 md:mb-6'
-      required 
-    />
-    <button 
-      type='submit'
-      className='w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-sm transition-colors duration-200 text-sm md:text-base'
-    >
-      Submit
-    </button>
-  </form>
-  <Link href='/change' className='text-xs sm:text-sm md:text-base lg:text-lg mt-2 md:mt-4'>Change Credentials?</Link>
-</div>
-  );
+  return <AdminForm />
 }
