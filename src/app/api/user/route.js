@@ -10,8 +10,10 @@ export async function POST(req) {
 
     const {phoneNumber, username} = body
 
-    if(phoneNumber.length < 11) return NextResponse.json(false)
 
+    const regex = /^(010|011|012|015)\d{8}$/;
+    if (phoneNumber.length !== 11 || !regex.test(String(phoneNumber))) return NextResponse.json(false);
+    
     await connectDB();
     
     const usersData = await UserModel.findOneAndUpdate(
