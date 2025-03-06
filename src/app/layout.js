@@ -48,9 +48,8 @@ export default async function RootLayout({ children }) {
         className={`bg-[url('../assets/solar-plate2.jpg')] bg-cover bg-fixed bg-bottom
           ${geistSans.variable} ${bangers.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
       >
-        {
-          !userSession && !adminSession? <Modal />: <><Navbar />{children}</>
-        }
+        {userSession && adminSession? <Navbar />: ''}
+        {children}
       </body>
     </html>
   );
