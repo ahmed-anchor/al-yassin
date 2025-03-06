@@ -15,9 +15,9 @@ export default async function AdminPage() {
       
 
       return (
-        <div className='w-full h-screen' >
+        <div className='w-full min-h-screen bg-[#08101a95]' >
           <div className="px-6 pt-32">
-            <h2 className="text-2xl font-bold mb-4">Customer Directory</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white pl-3">Customer Directory</h2>
             
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">

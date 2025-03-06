@@ -31,7 +31,6 @@ export const AdminForm = () => {
         window.location.reload();
       }
     } catch (error) {
-      console.error(error);
       setIsError(true);
     } finally {
       setIsLoading(false);
