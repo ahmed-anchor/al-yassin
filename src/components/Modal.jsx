@@ -73,7 +73,7 @@ export const Modal = () => {
               حدث خطأ أثناء المحاولة، يرجى التأكد من اتصال الإنترنت والمحاولة مرة أخرى
             </motion.div>
           )}
-          
+
           {errorNum && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -108,7 +108,7 @@ export const Modal = () => {
             >
               <input
                 dir="rtl"
-                type="tel"
+                type="number"
                 placeholder="رقم الهاتف"
                 value={formData.phoneNumber}
                 onChange={e => setFormData({ ...formData, phoneNumber: e.target.value })}
