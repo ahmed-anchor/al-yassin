@@ -30,12 +30,12 @@ const products = [
   { id: 8, name: 'موتور بونا', description: '', image: puna },
   { id: 9, name: 'الواح JA solar', description: '', image: ja },
   { id: 10, name: 'الواح ترينا', description: '', image: trina },
-  { id: 10, name: 'الواح جينجو', description: '', image: jingo },
+  { id: 11, name: 'الواح جينجو', description: '', image: jingo },
 ];
 
 const products2 = [
-  { id: 1, name: 'ماسورة ار سي فابا', description: 'مواسير بتكنولوجيا تركي و صناعه مصريه', image: faba },
-  { id: 2, name: 'ماسورة توكال', description: 'مواسير بتكنولوجيا هندي و صناعه مصريه', image: tokal },
+  { id: 12, name: 'ماسورة ار سي فابا', description: 'مواسير بتكنولوجيا تركي و صناعه مصريه', image: faba },
+  { id: 13, name: 'ماسورة توكال', description: 'مواسير بتكنولوجيا هندي و صناعه مصريه', image: tokal },
 
 ]
 
@@ -59,8 +59,8 @@ export default function Page() {
               visible: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 0.3,
-                  staggerChildren: 0.2
+                  delayChildren: 0.001,
+                  staggerChildren: 0.001
                 }
               }
             }}
@@ -91,9 +91,10 @@ export default function Page() {
               </motion.div>
             ))}
             {products2.map((product, index) => (
-              <Link href={products.id==1? '/products/faba': '/products/tokal'}>
+              <Link 
+              key={product.id}
+              href={products.id==1? '/products/faba': '/products/tokal'}>
                 <motion.div
-                  key={product.id}
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
                     visible: { opacity: 1, scale: 1 }
