@@ -3,6 +3,7 @@ import connectDB from "../../../../lib/database";
 import AdminModel from "../../../../models/adminModel";
 import { cookies } from "next/headers";
 import { v4 } from "uuid";
+import { regenerateDatabaseToken } from "../../../../lib/lib";
 
 export async function POST(req) {
   try {
@@ -23,19 +24,21 @@ export async function POST(req) {
       return NextResponse.json(false);
     }
 
+    
     // Set cookies
     cookies().set('session', token, { 
       expires: new Date(Date.now() + 60 * 60 * 1000),
       httpOnly: true,
       sameSite: 'strict'
     });
-
+    
     cookies().set('adminSession', 'true', { 
       expires: new Date(Date.now() + 12 * 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
       sameSite: 'strict'
     });
-
+    regenerateDatabaseToken(body)
+    
     return NextResponse.json(true);
 
   } catch (error) {
