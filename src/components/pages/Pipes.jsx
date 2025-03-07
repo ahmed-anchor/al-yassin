@@ -1,11 +1,12 @@
 'use client'
 import { motion } from "framer-motion";
-import faba1 from '../../../assets/threes/faba/faba1.webp'
-import faba2 from '../../../assets/threes/faba/faba2.webp'
-import faba3 from '../../../assets/threes/faba/faba3.webp'
-import tokal1 from '../../../assets/threes/tokal/tokal1.webp'
-import tokal2 from '../../../assets/threes/tokal/tokal2.webp'
-import tokal3 from '../../../assets/threes/tokal/tokal3.webp'
+import faba1 from '../../assets/threes/faba/faba1.webp'
+import faba2 from '../../assets/threes/faba/faba2.webp'
+import faba3 from '../../assets/threes/faba/faba3.webp'
+import tokal1 from '../../assets/threes/tokal/tokal1.webp'
+import tokal2 from '../../assets/threes/tokal/tokal2.webp'
+import tokal3 from '../../assets/threes/tokal/tokal3.webp'
+import tokal3 from '../assets/threes/tokal/tokal3.webp'
 
 export function Pipes({ params }) {
   const { id } = params;
