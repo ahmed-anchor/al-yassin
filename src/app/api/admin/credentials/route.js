@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 import connectDB from "../../../../../lib/database";
 import AdminModel from "../../../../../models/adminModel";
 import { cookies } from "next/headers";
-import { v4 } from "uuid";
-
+import { getSession } from "../../../../../lib/lib";
 
 export async function POST (req) {
   try {
+    const session = await getSession();
+    if(!session) return NextResponse.json({message: "you're not allowed here"})
+
     const body = await req.json();
 
     const {username, password} = body

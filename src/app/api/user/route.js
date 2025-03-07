@@ -2,9 +2,11 @@ import { NextResponse } from "next/server"
 import connectDB from "../../../../lib/database"
 import UserModel from "../../../../models/userModel";
 import { cookies } from "next/headers";
+import { getSession } from "../../../../lib/lib";
 
 export async function POST(req) {
   try {
+
     const body = await req.json();
 
     const {phoneNumber, username} = body
@@ -40,5 +42,40 @@ export async function POST(req) {
   } catch (error) {
 
     return NextResponse.error({ message: 'error with server' })
+  }
+}
+
+
+export async function GET () {
+  try {
+    const session = await getSession();
+    if(!session) return NextResponse.json({message: "you're not allowed here"})
+
+    await connectDB();
+    const users = await UserModel.find();
+
+    return NextResponse.json(users)
+
+  } catch (error) {
+    return NextResponse.json(false)
+  }
+}
+
+export async function PUT (req) {
+  try {
+    const session = await getSession();
+    if(!session) return NextResponse.json({message: "you're not allowed here"})
+    const id = await req.json();
+    console.log(id)
+
+
+    await connectDB();
+    const user = await UserModel.findByIdAndDelete(id);
+    console.log(user)
+
+    return NextResponse.json(true)
+
+  } catch (error) {
+    return NextResponse.json(false)
   }
 }

@@ -27,7 +27,7 @@ export const ChangeCredentials = () => {
       if (response.data) {
         setSuccess(true)
         setFormData({ username: '', password: '' })
-        setTimeout(() => router.push('/'), 1000)
+        setTimeout(() => router.push('/'), 1500)
       }
     } catch (error) {
       setIsError(true)

@@ -26,14 +26,11 @@ export const AdminForm = () => {
         setWrong(true);
         setIsLoading(false);
         setFormData({ username: '', password: '' });
-      } else {
-        setFormData({ username: '', password: '' });
-        window.location.reload();
-      }
+        return
+      } 
+      window.location.reload();
     } catch (error) {
       setIsError(true);
-    } finally {
-      setIsLoading(false);
     }
   }
 

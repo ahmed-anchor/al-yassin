@@ -1,6 +1,5 @@
 import React from 'react';
-import { login, getSession, changeCredentials } from '../../../lib/lib';
-import { redirect } from 'next/navigation';
+import { getSession } from '../../../lib/lib';
 import { AdminForm } from '@/components/admin/AdminForm';
 import { ChangeCredentials } from '@/components/admin/ChangeCredentials';
 
