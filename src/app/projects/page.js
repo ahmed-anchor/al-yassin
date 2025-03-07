@@ -1,4 +1,4 @@
-import { Projects } from '@/components/Projects';
+import { Projects } from '@/components/pages/Projects';
 import { getAdminSession, getUserSession } from '../../../lib/lib'
 import { redirect } from 'next/navigation';
 
