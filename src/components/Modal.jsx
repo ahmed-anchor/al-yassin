@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Spinner } from './Spinner';
 import Link from 'next/link';
 import axios from 'axios';
@@ -12,20 +13,24 @@ export const Modal = () => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorNum, setErrorNum] = useState(false);
+  const router = useRouter()
 
   const handleSubmit = async () => {
-    setIsLoading(true);
     try {
+      console.log(formData)
+      setIsLoading(true);
       const response = await axios.post('/api/user', formData);
       setFormData({ username: '', phoneNumber: '' });
+      console.log(response.data)
       if(!response.data) {
         setErrorNum(true)
         return
       }
-      window.location.reload();
+      router.push('/')
 
     } catch (error) {
       setIsError(true);
+      console.log(error)
     } finally {
       setIsLoading(false);
     }

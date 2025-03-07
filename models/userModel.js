@@ -8,7 +8,8 @@ const userSchema = Schema({
   phoneNumber: {
     type: String,
     required: true,
-    unique: true
+    unique: true, // Critical for preventing duplicates
+    index: true
   }
 });
 
