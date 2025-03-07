@@ -8,6 +8,7 @@ import tokal2 from '../../assets/threes/tokal/tokal2.webp'
 import tokal3 from '../../assets/threes/tokal/tokal3.webp'
 
 
+
 export function Pipes({ params }) {
   const { id } = params;
 
