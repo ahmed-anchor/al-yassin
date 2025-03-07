@@ -66,12 +66,9 @@ export async function PUT (req) {
     const session = await getSession();
     if(!session) return NextResponse.json({message: "you're not allowed here"})
     const id = await req.json();
-    console.log(id)
-
 
     await connectDB();
-    const user = await UserModel.findByIdAndDelete(id);
-    console.log(user)
+    await UserModel.findByIdAndDelete(id);
 
     return NextResponse.json(true)
 

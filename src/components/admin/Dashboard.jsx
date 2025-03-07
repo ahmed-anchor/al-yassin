@@ -21,8 +21,10 @@ export const Dashboard = () => {
       try {
         const response = await axios.get('/api/user')
         setCustomers(response.data)
+        setIsError(false)
       } catch (error) {
         console.error('Fetch error:', error)
+        setIsError(true)
       } finally {
         setIsLoading(false)
       }
@@ -49,13 +51,19 @@ export const Dashboard = () => {
     try {
       setIsLoading(true)
       const res = await axios.put('/api/user', JSON.stringify(id))
-      if(!res.data) setIsError(true);
-      setRefetch(prev=>!prev)
+      if(!res.data) {
+        throw new Error('Delete failed')
+      }
+      setIsError(false)
+      setRefetch(prev => !prev)
     } catch(error) {
+      console.error('Delete error:', error)
       setIsError(true)
+      setTimeout(() => setIsError(false), 3000) // Clear error after 3 seconds
+    } finally {
+      setIsLoading(false)
     }
   }
-
 
   const currentCustomers = isBookedPage ? bookedCustomers : unbookedCustomers
   const pageTitle = isBookedPage ? 'Booked Contacts' : 'All Contacts'
@@ -63,10 +71,29 @@ export const Dashboard = () => {
   return (
     <div className="min-h-screen bg-slate-50 p-6">
       <div className="max-w-6xl mx-auto pt-20">
+        {/* Error Display */}
+        {isError && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+          >
+            <span className="block sm:inline">
+              Error processing request. Please try again.
+            </span>
+            <button
+              onClick={() => setIsError(false)}
+              className="absolute top-0 right-0 px-3 py-1"
+            >
+              ×
+            </button>
+          </motion.div>
+        )}
+
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-2xl font-bold ">{pageTitle}</h1>
+          <h1 className="text-2xl font-bold">{pageTitle}</h1>
           <BookButton 
-            changeBookState={()=>{
+            changeBookState={() => {
               setIsBookedPage(!isBookedPage)
             }}
           />
