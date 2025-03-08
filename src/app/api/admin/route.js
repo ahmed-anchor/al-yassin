@@ -26,12 +26,12 @@ export async function POST(req) {
       return NextResponse.json(false);
     }
 
-    
     // Set cookies
     cookies().set('session', token, { 
       expires: new Date(Date.now() + 60 * 60 * 1000),
       httpOnly: true,
-      sameSite: 'strict'
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === "production"
     });
     
     cookies().set('adminSession', 'true', { 
