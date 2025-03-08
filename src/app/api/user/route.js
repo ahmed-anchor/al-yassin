@@ -71,7 +71,8 @@ export async function GET () {
 export async function PUT (req) {
   try {
     const session = await getSession();
-    if(!session) return NextResponse.json({message: "you're not allowed here"})
+    if(!session) return NextResponse.json(null)
+
     const id = await req.json();
 
     await connectDB();
