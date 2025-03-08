@@ -56,7 +56,7 @@ export async function POST(req) {
 export async function GET () {
   try {
     const session = await getSession();
-    if(!session) return NextResponse.json({message: "you're not allowed here"})
+    if(!session) return NextResponse.json(null)
 
     await connectDB();
     const users = await UserModel.find();

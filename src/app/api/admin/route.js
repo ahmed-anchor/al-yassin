@@ -5,8 +5,10 @@ import { cookies } from "next/headers";
 import { v4 } from "uuid";
 import { regenerateDatabaseToken } from "../../../../lib/lib";
 
+
 export async function POST(req) {
   try {
+
     const body = await req.json();
     const { username, password } = body;
     const token = v4();

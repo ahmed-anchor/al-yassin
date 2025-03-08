@@ -7,7 +7,7 @@ import { getSession } from "../../../../../lib/lib";
 export async function POST (req) {
   try {
     const session = await getSession();
-    if(!session) return NextResponse.json({message: "you're not allowed here"})
+    if(!session) return NextResponse.json(null)
 
     const body = await req.json();
 
