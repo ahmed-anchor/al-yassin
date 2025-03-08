@@ -1,4 +1,4 @@
-import { getAdminSession, getUserSession } from '../../../lib/lib'
+import { getAdminSession, getUserSession } from '../../../../lib/lib';
 import { redirect } from 'next/navigation';
 import { Pipes } from '@/components/pages/Pipes';
 
