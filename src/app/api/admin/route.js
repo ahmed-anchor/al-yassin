@@ -31,7 +31,7 @@ export async function POST(req) {
       expires: new Date(Date.now() + 60 * 60 * 1000),
       httpOnly: true,
       sameSite: 'strict',
-      secure: process.env.NODE_ENV === "production"
+      secure: true
     });
     
     cookies().set('adminSession', 'true', { 
