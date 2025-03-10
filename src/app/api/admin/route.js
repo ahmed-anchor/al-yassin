@@ -8,7 +8,7 @@ import { regenerateDatabaseToken } from "../../../../lib/lib";
 
 export async function POST(req) {
   try {
-
+    
     const body = await req.json();
     const { username, password } = body;
     const token = v4();
@@ -39,9 +39,12 @@ export async function POST(req) {
       httpOnly: true,
       sameSite: 'strict'
     });
+
+    // regenerate another token in the database
     regenerateDatabaseToken(body)
+
     
-    return NextResponse.json(true);
+    return NextResponse.json(true)
 
   } catch (error) {
     return NextResponse.json({ message: 'Internal server error' });

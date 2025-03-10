@@ -6,6 +6,7 @@ import { getSession } from "../../../../lib/lib";
 
 export async function POST(req) {
   try {
+
     const body = await req.json();
     const { phoneNumber, username } = body;
 
@@ -45,10 +46,11 @@ export async function POST(req) {
       httpOnly: true,
       sameSite: 'strict'
     });
+
     return NextResponse.json(true)
-    
   } catch (error) {
-    return NextResponse.json(false);
+    
+    return NextResponse.json(false)
   }
 }
 
