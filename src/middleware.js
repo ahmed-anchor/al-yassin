@@ -14,7 +14,7 @@ export function middleware(request) {
   // 2. Only apply to API routes
   if (pathname.startsWith('/api')) {
     // 3. Only check methods that require a body
-    const methodsToCheck = ['POST', 'PUT', 'PATCH'];
+    const methodsToCheck = ['POST', 'PATCH'];
     
     if (methodsToCheck.includes(method)) {
       // 4. Validate Content-Type

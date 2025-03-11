@@ -18,29 +18,22 @@ export async function POST(req) {
 
     await connectDB();
 
-    const result = await UserModel.findOneAndUpdate(
-      { phoneNumber: phoneNumber.trim() },
-      { 
-        $setOnInsert: { // Only set these on creation
-          username: username.trim(),
-          phoneNumber: phoneNumber.trim()
-        }
-      },
-      { 
-        upsert: true,
-        new: true,
-        runValidators: true,
-        rawResult: true // Get MongoDB driver result
-      }
-    );
+    const checked = await UserModel.findOne({ phoneNumber: phoneNumber.trim() })
 
-    console.log(result)
-    
-    // Check if it was an insert (new user)
-    if (!result) return NextResponse.json(false);
-      // Set cookie only for new users
-      
-      
+    if(!checked) {
+      await UserModel.create({ phoneNumber: phoneNumber.trim(), username: username.trim() })
+      return NextResponse.json(true)
+    } 
+    await UserModel.replaceOne({
+      phoneNumber: phoneNumber.trim()
+    },
+    {
+      phoneNumber: phoneNumber.trim(),
+      username: username.trim()
+    }
+    )
+
+    // Set cookie only for new users
     cookies().set('userSession', 'true', { 
       expires: new Date(Date.now() + 3 * 30 * 24 * 60 * 60 * 1000), // 3 months
       httpOnly: true,
