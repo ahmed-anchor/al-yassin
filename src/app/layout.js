@@ -33,7 +33,7 @@ export const metadata = {
   openGraph: {
     title: "Al Yassin - الياسين",
     description: "شركة الياسين لمولدات الطاقه الشمسيه و مواسير المياه والواح الطقه",
-    images: [{url: "https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/415991490_884398176712010_5415645002089561395_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=aPSVrcruhvkQ7kNvgEoeG9J&_nc_oc=AdgddJnFkXZ3qu51n2aRp4Yy9eGLb0kf5krqzPl72TO2-DH_cQM7ubisNsAIE0eVXdE&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=ARMx9EwV7rl3WSo7EVfuMk7&oh=00_AYC9eAyVny-FxVl1-RjgRwvqPdlbzUQSTZ2nFe7omHA24w&oe=67CD4E20"}],
+    images: [{url: "https://scontent.fcai26-1.fna.fbcdn.net/v/t39.30808-6/415991490_884398176712010_5415645002089561395_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pPSn-GUtb-MQ7kNvgEGf5mD&_nc_oc=AdhzFJ2nRwtkngYMCNYUHUTt2b1DJYxz9imKK55YSL2v94ZvNSDWwVJ3U-QnsGjrmHs&_nc_zt=23&_nc_ht=scontent.fcai26-1.fna&_nc_gid=A20zuHb9xbTl6CMa0m1RJRd&oh=00_AYGZkpiF_5c2vN-we14fcEZ0HACJw0_jvzj70Hym9TXnJg&oe=67D65060"}],
   },
 };
 
