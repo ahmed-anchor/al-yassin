@@ -56,7 +56,7 @@ export const Carousel = () => {
         transition={{ duration: 0.6 }}
         className="text-3xl text-center text-white font-bold Lalezar pb-12"
       >
-        الشركة وكيل ل
+        موزع معتمد
       </motion.h2>
       <motion.div
         ref={carouselRef}
