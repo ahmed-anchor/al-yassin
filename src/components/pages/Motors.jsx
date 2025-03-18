@@ -9,22 +9,22 @@ import { motion } from 'framer-motion'
 const motors = [
   { 
     img: shakti, 
-    name: ' shakti مطور شاكتي', 
+    name: ' shakti ماتور شاكتي', 
     description: '' 
   },
   { 
     img: ferat, 
-    name: 'مطور فيرات',
+    name: 'ماتور فيرات',
     description: '' 
   },
   { 
     img: max, 
-    name: 'مطور ماكس هندي', 
-    description: 'قوة صناعية مع استهلاك طاقة مثالي للإنتاج المستمر' 
+    name: 'ماتور ماكس هندي', 
+    description: '' 
   },
   { 
     img: puna, 
-    name: 'مطور بونا هندي', 
+    name: 'ماتور بونا هندي', 
     description: '' 
   },
 ]
