@@ -53,6 +53,34 @@ export function Products() {
               }
             }}
           >
+          {products2.map((product, index) => (
+              <Link 
+              key={product.id}
+              href={index==0? '/products/faba': '/products/tokal'}>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                >
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                      priority={index < 3}
+                    />
+                  </div>
+                  <div className="p-6 Lalezar">
+                    <h3 className="text-3xl font-medium mb-4">{product.name}</h3>
+                    <p className="text-xl">{product.description}</p>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
             {inverters.map((product, index) => (
               <Link
               key={product.id}
@@ -141,34 +169,6 @@ export function Products() {
               <Link
               key={product.id}
               href="/products/plates">
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.8 },
-                    visible: { opacity: 1, scale: 1 }
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden"
-                >
-                  <div className="relative h-64 w-full overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover transition-transform duration-300 hover:scale-110"
-                      priority={index < 3}
-                    />
-                  </div>
-                  <div className="p-6 Lalezar">
-                    <h3 className="text-3xl font-medium mb-4">{product.name}</h3>
-                    <p className="text-xl">{product.description}</p>
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
-            {products2.map((product, index) => (
-              <Link 
-              key={product.id}
-              href={index==0? '/products/faba': '/products/tokal'}>
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
