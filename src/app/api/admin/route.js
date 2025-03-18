@@ -9,6 +9,7 @@ export async function POST(req) {
   try {
     
     const body = await req.json();
+    
     const { username, password } = body;
     const token = v4();
 
