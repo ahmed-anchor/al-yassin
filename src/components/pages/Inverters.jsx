@@ -9,23 +9,23 @@ import { motion } from 'framer-motion'
 const inverters = [
   { 
     img: delexi, 
-    name: 'إنفرتر ديلوكسي', 
-    description: 'تحويل طاقة عالي الكفاءة مع نظام تبريد متطور للاستخدامات المكثفة' 
+    name: 'delexi إنفرتر ديليكسي', 
+    description: '' 
   },
   { 
-    img: himel, 
-    name: 'إنفرتر هيميل', 
-    description: 'أداء صناعي مع تقنيات مراقبة ذكية وتحكم دقيق بالطاقة' 
+    img: himel,
+    name: 'إنفرتر هيميل himel', 
+    description: '' 
   },
   { 
     img: invt, 
-    name: 'إنفرتر إنفت', 
-    description: 'تحكم ترددي دقيق للتطبيقات الحساسة والعمليات الدقيقة' 
+    name: 'إنفرتر ان في تي invt', 
+    description: '' 
   },
   { 
     img: veichi, 
     name: 'إنفرتر فيتشي', 
-    description: 'تقنية توفير طاقة مع تصميم مدمج وحداتي مرن' 
+    description: '' 
   },
 ]
 

@@ -8,12 +8,12 @@ import { motion } from 'framer-motion'
 const cables = [
   {
     img: dc,
-    name: 'كابلات تيار مستمر',
+    name: 'كابلات دي سي 4,6 ml',
     description: 'كابلات عالية الجودة مع عزل حراري ممتاز لتحمل الجهد العالي'
   },
   {
     img: bahhari,
-    name: 'كابلات بحري',
+    name: 'كابلات بحاري',
     description: 'تصميم مقاوم للعوامل الجوية مع حماية ضد التآكل في البيئات القاسية'
   },
 ]

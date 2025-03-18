@@ -12,6 +12,7 @@ import natron from '../../assets/solar-plates/el-natron.webp'
 import wadi20 from '../../assets/solar-plates/el-wadi-20.webp'
 import wadi_gidid from '../../assets/solar-plates/wadi-gidid.webp'
 import tagamo3 from '../../assets/solar-plates/tagamo3.webp'
+import behera from '../../assets/solar-plates/el-behera.webp'
 
 const projects = [
   {
@@ -50,7 +51,7 @@ const projects = [
     image: khargia
   },
   {
-    title: "مشروع  الواحات البحرية",
+    title: "مشروع الواحات البحرية",
     description: "إنشاء محطة طاقة شمسية بقدرة 25 كيلو وات في الواحات البحريه",
     image: baharia
   },
@@ -63,6 +64,11 @@ const projects = [
     title: "مشروع التجمع الخامس",
     description: "إنشاء محطة اوف جريد بقدرة 3 كيلو وات في التجمع الخامس",
     image: tagamo3
+  },
+  {
+    title: "مشروع البحيره",
+    description: "تركيب محطه بقدر ١٥ كيلو وات في احد مواقعنا في البحيره",
+    image: behera
   },
 ];
 

@@ -9,18 +9,18 @@ import trina from '../../assets/solar-plates/trina-solar.webp'
 const solarPlates = [
   {
     img: ja,
-    name: 'ألواح جي أي الشمسية',
-    description: 'كفاءة عالية في الظروف المناخية القاسية مع ضمان أداء طويل الأمد'
+    name: 'ألواح جي أي',
+    description: ''
   },
   {
     img: jingo,
-    name: 'ألواح جينغو الشمسية',
-    description: 'تصميم خفيف الوزن مع مقاومة عالية للرياح والأتربة'
+    name: 'ألواح جينغو',
+    description: ''
   },
   {
     img: trina,
-    name: 'ألواج ترينا الشمسية',
-    description: 'تقنية الخلايا المقطعية لزيادة إنتاج الطاقة في المساحات المحدودة'
+    name: 'ألواج ترينا',
+    description: ''
   },
 ]
 

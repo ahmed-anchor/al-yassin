@@ -9,23 +9,23 @@ import { motion } from 'framer-motion'
 const motors = [
   { 
     img: shakti, 
-    name: 'محرك شاكتي', 
-    description: 'محرك عزم عالي مع هندسة دقيقة للاستخدامات الثقيلة' 
+    name: ' shakti مطور شاكتي', 
+    description: '' 
   },
   { 
     img: ferat, 
-    name: 'محرك فرات', 
-    description: 'تصميم أنيق مع كفاءة دورانية فائقة وتشغيل سلس' 
+    name: 'مطور فيرات',
+    description: '' 
   },
   { 
     img: max, 
-    name: 'محرك ماكس', 
+    name: 'مطور ماكس هندي', 
     description: 'قوة صناعية مع استهلاك طاقة مثالي للإنتاج المستمر' 
   },
   { 
     img: puna, 
-    name: 'محرك بونا', 
-    description: 'حجم مضغوط مع إدارة حرارية استثنائية للمساحات المحدودة' 
+    name: 'مطور بونا هندي', 
+    description: '' 
   },
 ]
 
