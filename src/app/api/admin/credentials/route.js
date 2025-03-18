@@ -3,7 +3,6 @@ import connectDB from "../../../../../lib/database";
 import AdminModel from "../../../../../models/adminModel";
 import { cookies } from "next/headers";
 import { getSession } from "../../../../../lib/lib";
-import { crypto } from 'crypto'
 
 export async function POST (req) {
   try {

@@ -1,5 +1,4 @@
 'use client'
-
 import React from 'react'
 import dc from '../../assets/cables/dc.webp'
 import bahhari from '../../assets/cables/bahhari.webp'
@@ -9,12 +8,12 @@ const cables = [
   {
     img: dc,
     name: 'كابلات دي سي 4,6 ml',
-    description: 'كابلات عالية الجودة مع عزل حراري ممتاز لتحمل الجهد العالي'
+    description: ''
   },
   {
     img: bahhari,
     name: 'كابلات بحاري',
-    description: 'تصميم مقاوم للعوامل الجوية مع حماية ضد التآكل في البيئات القاسية'
+    description: 'متوفر جميع القطاعات'
   },
 ]
 

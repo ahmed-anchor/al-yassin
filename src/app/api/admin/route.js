@@ -3,7 +3,7 @@ import connectDB from "../../../../lib/database";
 import AdminModel from "../../../../models/adminModel";
 import { cookies } from "next/headers";
 import { v4 } from "uuid";
-import { regenerateDatabaseToken } from "../../../../lib/lib";
+import { regenerateDatabaseToken, verifyPassword } from "../../../../lib/lib";
 
 export async function POST(req) {
   try {
@@ -16,7 +16,7 @@ export async function POST(req) {
 
     // Find admin and update token
     const admin = await AdminModel.findOneAndUpdate(
-      { username, password }, // Find by credentials
+      { username, password },  // Find by credentials
       { $set: { token } },     // Update the token field
       { new: true }            // Return the updated document
     );
