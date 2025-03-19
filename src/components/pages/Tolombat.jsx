@@ -9,22 +9,22 @@ import nafora from '../../assets/tolombat/nafora.webp'
 const tolombatItems = [
   { 
     img: ferat, 
-    name: 'طلمبة فيرات', 
+    name: 'طلمبات فيرات', 
     description: '' 
   },
   { 
     img: sp, 
-    name: 'طلمبة SP',
+    name: 'طلمبات SP',
     description: '' 
   },
   { 
     img: shakti, 
-    name: 'طلمبة شاكتي', 
+    name: 'طلمبات شاكتي', 
     description: '' 
   },
   { 
     img: nafora, 
-    name: 'طلمبة نافورة', 
+    name: 'طلمبات نافورة', 
     description: '' 
   },
 ]
