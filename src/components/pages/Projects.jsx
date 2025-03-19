@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "مشروع منيا القمح",
-    description: "انشاء محطه انتره في منيا القمح",
+    description: "انشاء محطه اناره في منيا القمح",
     image: menia_amh
   },
   {
