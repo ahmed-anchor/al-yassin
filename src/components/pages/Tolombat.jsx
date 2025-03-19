@@ -1,41 +1,35 @@
 'use client'
 import React from 'react'
-import shakti from '../../assets/motors/shakti-hindi-motor.webp'
-import ferat from '../../assets/motors/ferat-motor.webp'
-import max from '../../assets/motors/max-motor.webp'
-import puna from '../../assets/motors/puna-motor.webp'
-import nafora from '../../assets/tolombat/nafora.webp'
 import { motion } from 'framer-motion'
+import ferat from '../../assets/tolombat/ferat.webp'
+import sp from '../../assets/tolombat/sp.webp'
+import shakti from '../../assets/tolombat/shkti.webp'
+import nafora from '../../assets/tolombat/nafora.webp'
 
-const motors = [
-  { 
-    img: shakti, 
-    name: ' shakti ماتور شاكتي', 
-    description: '' 
-  },
+const tolombatItems = [
   { 
     img: ferat, 
-    name: 'ماتور فيرات',
+    name: 'طلمبة فيرات', 
     description: '' 
   },
   { 
-    img: max, 
-    name: 'ماتور ماكس هندي', 
+    img: sp, 
+    name: 'طلمبة SP',
     description: '' 
   },
   { 
-    img: puna, 
-    name: 'ماتور بونا هندي', 
+    img: shakti, 
+    name: 'طلمبة شاكتي', 
     description: '' 
   },
   { 
     img: nafora, 
-    name: 'ماتور نافرا', 
+    name: 'طلمبة نافورة', 
     description: '' 
   },
 ]
 
-export default function Motors() {
+export default function Tolombat() {
   return (
     <div dir="rtl" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-24">
       <motion.div 
@@ -52,7 +46,7 @@ export default function Motors() {
           }
         }}
       >
-        {motors.map((motor, index) => (
+        {tolombatItems.map((item, index) => (
           <motion.div
             key={index}
             variants={{
@@ -64,8 +58,8 @@ export default function Motors() {
           >
             <div className="relative h-72 w-full">
               <motion.img
-                src={motor.img.src}
-                alt={motor.name}
+                src={item.img.src}
+                alt={item.name}
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: 'spring', stiffness: 250 }}
@@ -74,10 +68,10 @@ export default function Motors() {
             
             <div className="p-6 space-y-4 Lalezar">
               <h3 className="text-3xl font-medium">
-                {motor.name}
+                {item.name}
               </h3>
               <p className="text-lg leading-relaxed text-justify">
-                {motor.description}
+                {item.description}
               </p>
             </div>
           </motion.div>

@@ -5,6 +5,7 @@ import Motors from '@/components/pages/Motors';
 import Inverters from '@/components/pages/Inverters';
 import SolarPlates from '@/components/pages/SolarPlates';
 import Cables from '@/components/pages/Cables';
+import Tolombat from '@/components/pages/Tolombat';
 
 export default async function page({params}) {
   const userSession = await getUserSession();
@@ -18,4 +19,5 @@ export default async function page({params}) {
   if('inverters' == id) return <Inverters />
   if('plates' == id) return <SolarPlates />
   if('cables' == id) return <Cables />
+  if('tolombat' == id) return <Tolombat />
 }

@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 export function About() {
   return (
-    <div className="min-h-screen bg-gray-100 pb-16 pt-28 px-4 sm:px-6 lg:px-8 font-lalezar" dir="rtl">
+    <div className="min-h-screen bg-gray-100 pb-16 pt-28 px-4 sm:px-6 lg:px-8 font-lalezar absolute" dir="rtl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-7xl mx-auto Lalezar"
+        className="max-w-screen mx-auto Lalezar"
       >
         <h1 className="text-4xl font-bold text-center mb-12 text-[#2a4365]">من نحن</h1>
 

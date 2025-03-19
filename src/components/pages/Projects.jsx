@@ -13,6 +13,7 @@ import wadi20 from '../../assets/solar-plates/el-wadi-20.webp'
 import wadi_gidid from '../../assets/solar-plates/wadi-gidid.webp'
 import tagamo3 from '../../assets/solar-plates/tagamo3.webp'
 import behera from '../../assets/solar-plates/el-behera.webp'
+import arish from '../../assets/solar-plates/el-arish.webp'
 
 const projects = [
   {
@@ -70,6 +71,11 @@ const projects = [
     description: "تركيب محطه بقدر ١٥ كيلو وات في احد مواقعنا في البحيره",
     image: behera
   },
+  {
+    title: "مشروع البحيره",
+    description: "توريد محطه بقدر ٩،٦٨٠ كيلو وات في احد مواقعنا بالعريش و مكونات المحطه ،خلايا ٦٠٥ وات ،انفرتر ديليكسي ١٠ حصان، شاسيه ثابت، كابلات dc المانيJA",
+    image: arish
+  },
 ];
 
 export function Projects() {
@@ -94,8 +100,8 @@ export function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative w-full h-96 cursor-pointer"
+                transition={{ duration: 0.6, delay: index * 0.004 }}
+                className="group relative w-full h-52 sm:h-80 cursor-pointer"
               >
                 {/* Image Container */}
                 <motion.div

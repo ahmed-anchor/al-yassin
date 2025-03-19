@@ -8,24 +8,28 @@ import shaktimotor from '../../assets/motors/shakti-hindi-motor.webp'
 import himel from '../../assets/inverter/himel-inverter.webp'
 import dc from '../../assets/cables/dc.webp'
 import ja from '../../assets/solar-plates/ja-solar-plate.webp'
+import ferat from '../../assets/tolombat/ferat.webp'
 import { Footer } from '@/components/Footer'
 import Link from 'next/link'
 
 const motors = [
   { id: 1, name: 'مواتير', description: '', image: shaktimotor },
 ]
+const tolombat = [
+  { id: 2, name: 'طلمبات', description: '', image: ferat },
+]
 const plates = [
-  { id: 2, name: 'الواح طاقه', description: '', image: ja },
+  { id: 3, name: 'الواح طاقه', description: '', image: ja },
 ]
 const inverters = [
-  { id: 3, name: 'انفرترات', description: '', image: himel },
+  { id: 4, name: 'انفرترات', description: '', image: himel },
 ];
 const cables = [
-  { id: 4, name: 'كابلات', description: '', image: dc },
+  { id: 5, name: 'كابلات', description: '', image: dc },
 ]
 const products2 = [
-  { id: 5, name: 'ماسورة ار سي فابا', description: 'مواسير بتكنولوجيا تركي و صناعه مصريه', image: faba },
-  { id: 6, name: 'ماسورة توكال', description: 'مواسير بتكنولوجيا هندي و صناعه مصريه', image: tokal },
+  { id: 6, name: 'ماسورة ار سي فابا', description: 'مواسير بتكنولوجيا تركي و صناعه مصريه', image: faba },
+  { id: 7, name: 'ماسورة توكال', description: 'مواسير بتكنولوجيا هندي و صناعه مصريه', image: tokal },
 ]
 
 export function Products() {
@@ -85,6 +89,34 @@ export function Products() {
               <Link
               key={product.id}
               href="/products/inverters">
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                >
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                      priority={index < 3}
+                    />
+                  </div>
+                  <div className="p-6 Lalezar">
+                    <h3 className="text-3xl font-medium mb-4">{product.name}</h3>
+                    <p className="text-xl">{product.description}</p>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+            {tolombat.map((product, index) => (
+              <Link
+              key={product.id}
+              href="/products/tolombat">
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },

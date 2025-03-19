@@ -14,7 +14,7 @@ const solarPlates = [
   },
   {
     img: jingo,
-    name: 'ألواح جينغو',
+    name: 'ألواح جينكو',
     description: ''
   },
   {
