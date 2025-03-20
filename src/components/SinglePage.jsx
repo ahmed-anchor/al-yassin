@@ -9,6 +9,7 @@ import { Footer } from './Footer';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Lenis from 'lenis';
+import { getUserSession, getAdminSession } from '../../lib/lib';
 
 export const SinglePage = () => {
   const router = useRouter();
@@ -24,9 +25,11 @@ export const SinglePage = () => {
 
     rafId = requestAnimationFrame(raf);
 
-    const timer = setTimeout(() => {
-      router.push('/userForm');
-    }, 10000);
+    const timer = setTimeout(async() => {
+      const userSession = await getUserSession();
+      const adminSession = await getAdminSession();
+      if(!userSession && !adminSession) router.push('/userForm');
+    }, 8000);
 
     return () => {
       cancelAnimationFrame(rafId);
