@@ -8,12 +8,13 @@ import Image from 'next/image';
 import yassin from '../assets/al-yassin.jpg';
 import { motion } from 'framer-motion';
 
+
 export const Modal = () => {
   const [formData, setFormData] = useState({ username: '', phoneNumber: '' });
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorNum, setErrorNum] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = async () => {
     try {
@@ -37,8 +38,17 @@ export const Modal = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-200 flex flex-col items-center justify-center p-4">
+    <div className="fixed inset-0 bg-[#0000008a] flex flex-col items-center justify-center p-5 pt-10">
       {/* Animated Logo */}
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', stiffness: 100 }}
+        className=" text-white rounded-full shadow-lg absolute text-3xl font-black top-28 right-5"
+        onClick={() => router.push('/')}
+      >
+        x
+      </motion.div>
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -63,12 +73,8 @@ export const Modal = () => {
           className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md"
         >
           <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800 mb-2">تسجيل الدخول الآمن</h1>
-            <p className="text-sm text-gray-600">
-              بياناتك محمية بشكل كامل وفق أعلى معايير الأمان
-            </p>
+            <h1 className="text-2xl font-bold text-gray-800 mb-2">سجل دخول لخدمه تواصل افضل</h1>
           </div>
-
           {isError && (
             <motion.div
               initial={{ opacity: 0 }}

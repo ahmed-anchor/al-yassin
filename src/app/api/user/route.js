@@ -65,10 +65,12 @@ export async function GET () {
 
 export async function PUT (req) {
   try {
+
     const session = await getSession();
     if(!session) return NextResponse.json(null)
 
-    const id = await req.json();
+    const {id} = await req.json();
+
 
     await connectDB();
     await UserModel.findByIdAndDelete(id);

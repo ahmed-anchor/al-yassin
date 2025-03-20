@@ -50,7 +50,7 @@ export const Dashboard = () => {
   const deleteContact = async (id) => {
     try {
       setIsLoading(true)
-      const res = await axios.put('/api/user', JSON.stringify(id))
+      const res = await axios.put('/api/user', JSON.stringify({id: id}))
       if(!res.data) {
         throw new Error('Delete failed')
       }

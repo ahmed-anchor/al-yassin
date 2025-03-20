@@ -7,6 +7,7 @@ export default async function page() {
   const adminSession = await getAdminSession();
 
   if(!userSession && !adminSession) redirect('/userFrom');
+
   
   return <About />
 }
