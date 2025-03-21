@@ -7,6 +7,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import yassin from '../assets/al-yassin.jpg';
 import { motion } from 'framer-motion';
+import { setUserSession } from '../../lib/lib';
 
 
 export const Modal = () => {
@@ -44,8 +45,11 @@ export const Modal = () => {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className=" text-white rounded-full shadow-lg absolute text-3xl font-black top-28 right-5"
-        onClick={() => router.push('/')}
+        className=" text-white rounded-full cursor-pointer shadow-lg absolute text-3xl font-black sm:top-28 top-20 right-5 sm:right-16"
+        onClick={async() => {
+          await setUserSession();
+          router.back();
+        }}
       >
         x
       </motion.div>

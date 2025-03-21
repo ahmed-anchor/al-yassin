@@ -1,9 +1,17 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 import Link from 'next/link'
+import { setUserSession } from '../../../lib/lib'
 
 export function About() {
+
+  useEffect(() => {
+    setUserSession();
+  }
+  , [])
+
   return (
     <div className="min-h-screen bg-gray-100 pb-16 pt-28 px-4 sm:px-6 lg:px-8 font-lalezar absolute" dir="rtl">
       <motion.div

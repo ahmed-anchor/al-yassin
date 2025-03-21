@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 
-export function middleware(request) {
+export async function middleware(request) {
   const pathname = request.nextUrl.pathname;
   const method = request.method;
   const contentType = request.headers.get('Content-Type');
+
 
   // 1. Security headers for ALL responses
   const response = NextResponse.next();
@@ -41,3 +42,4 @@ export function middleware(request) {
 export const config = {
   matcher: ['/api/:path*']
 };
+

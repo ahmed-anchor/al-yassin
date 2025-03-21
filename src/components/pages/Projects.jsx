@@ -1,6 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Footer } from '@/components/Footer'
+import { useEffect } from 'react'
+import { setUserSession } from '../../../lib/lib'
 import Image from 'next/image'
 import monira from '../../assets/solar-plates/el-monira.webp'
 import menia_amh from '../../assets/solar-plates/menia-amh.webp'
@@ -79,6 +81,12 @@ const projects = [
 ];
 
 export function Projects() {
+
+  useEffect(() => {
+    setUserSession();
+  }
+  , [])
+
   return (
     <>
       <div className="w-full px-4 py-28 sm:px-6 lg:px-8 bg-[#00000082]">

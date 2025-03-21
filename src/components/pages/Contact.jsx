@@ -1,8 +1,16 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { setUserSession } from '../../../lib/lib';
 
 export function Contact() {
+
+  useEffect(() => {
+    setUserSession();
+  }
+  , [])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Main Content */}

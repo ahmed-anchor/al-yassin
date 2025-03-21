@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+import { useEffect } from 'react'
+import { setUserSession } from '../../../lib/lib'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import faba from '../../assets/pipes/faba-pipe.webp'
@@ -33,6 +35,14 @@ const products2 = [
 ]
 
 export function Products() {
+
+
+  useEffect(() => {
+    setUserSession();
+  }
+  , [])
+
+
   return (
     <>
       <div className="min-h-screen bg-gray-100 pb-12 pt-28 px-4 sm:px-6 lg:px-8 overflow-hidden font-lalezar" dir="rtl">
