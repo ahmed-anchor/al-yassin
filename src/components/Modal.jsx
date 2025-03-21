@@ -39,7 +39,7 @@ export const Modal = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-[#0000008a] flex flex-col items-center justify-center p-5 pt-10">
+    <div className="fixed Cairo inset-0 bg-[#0000008a] flex flex-col items-center justify-center p-5 pt-10">
       {/* Animated Logo */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
@@ -77,7 +77,7 @@ export const Modal = () => {
           className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md"
         >
           <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800 mb-2">سجل دخول لخدمه تواصل افضل</h1>
+            <h1 className="text-xl font-bold text-gray-800 mb-2 ">سجل دخول لخدمه تواصل افضل</h1>
           </div>
           {isError && (
             <motion.div

@@ -70,7 +70,7 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 p-6">
-      <div className="max-w-6xl mx-auto pt-20">
+      <div className="max-w-6xl  mx-auto pt-20">
         {/* Error Display */}
         {isError && (
           <motion.div
@@ -115,7 +115,7 @@ export const Dashboard = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white Cairo rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex justify-between items-start">
                   <div>

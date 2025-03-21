@@ -35,7 +35,7 @@ export const AdminForm = () => {
   }
 
   return (
-    <div className="w-full min-h-screen p-4 bg-gray-100 flex flex-col items-center justify-center">
+    <div className="w-full Cairo min-h-screen p-4 bg-gray-100 flex flex-col items-center justify-center">
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -70,7 +70,7 @@ export const AdminForm = () => {
           onSubmit={handleSubmit}
         >
           <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800">دخول المسؤولين الآمن</h1>
+            <h1 className="text-2xl font-bold text-gray-800">دخول المسؤولين</h1>
             <p className="text-sm text-gray-600 mt-2">
               نظام آمن ومشفّر لإدارة المحتوى
             </p>

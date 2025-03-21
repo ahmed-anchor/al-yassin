@@ -37,7 +37,7 @@ export const ChangeCredentials = () => {
   }
 
   return (
-    <div className="w-full min-h-screen p-4 bg-gray-100 flex flex-col items-center justify-center">
+    <div className="w-full Cairo min-h-screen p-4 bg-gray-100 flex flex-col items-center justify-center">
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
