@@ -47,8 +47,8 @@ export const ChangeCredentials = () => {
         <Image
           src={yassin}
           alt="Al Yassin"
-          width={120}
-          height={120}
+          width={95}
+          height={95}
           className="rounded-full border-4 border-white shadow-xl"
           priority
         />
@@ -80,10 +80,7 @@ export const ChangeCredentials = () => {
           onSubmit={handleSubmit}
         >
           <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800">تحديث بيانات الدخول</h1>
-            <p className="text-sm text-gray-600 mt-2">
-              يرجى إدخال بيانات الاعتماد الجديدة بعناية
-            </p>
+            <h1 className="text-lg font-bold text-gray-800">تحديث بيانات الدخول</h1>
           </div>
 
           <motion.div
@@ -95,7 +92,7 @@ export const ChangeCredentials = () => {
               type='text' 
               placeholder='اسم المستخدم الجديد' 
               name='username'
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
               dir="rtl"
               required
               value={formData.username}
@@ -112,7 +109,7 @@ export const ChangeCredentials = () => {
               type='password' 
               placeholder='كلمة المرور الجديدة' 
               name='password' 
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-right"
               dir="rtl"
               required
               value={formData.password}
@@ -126,7 +123,7 @@ export const ChangeCredentials = () => {
           >
             <button 
               type='submit'
-              className="w-full bg-green-600 text-white p-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+              className="w-full bg-green-600 text-white p-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
             >
               تحديث البيانات
             </button>

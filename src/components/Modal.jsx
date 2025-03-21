@@ -62,8 +62,8 @@ export const Modal = () => {
         <Image
           src={yassin}
           alt="Al Yassin"
-          width={120}
-          height={120}
+          width={95}
+          height={95}
           className="rounded-full border-4 border-white shadow-xl"
         />
       </motion.div>
@@ -77,7 +77,7 @@ export const Modal = () => {
           className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md"
         >
           <div className="text-center mb-6">
-            <h1 className="text-xl font-bold text-gray-800 mb-2 ">سجل دخول لخدمه تواصل افضل</h1>
+            <h1 className="text-lg font-bold text-gray-800 mb-2 ">سجل دخول لخدمه تواصل افضل</h1>
           </div>
           {isError && (
             <motion.div
@@ -111,7 +111,7 @@ export const Modal = () => {
                 placeholder="اسم المستخدم"
                 value={formData.username}
                 onChange={e => setFormData({ ...formData, username: e.target.value })}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
             </motion.div>
@@ -127,7 +127,7 @@ export const Modal = () => {
                 placeholder="رقم الهاتف"
                 value={formData.phoneNumber}
                 onChange={e => setFormData({ ...formData, phoneNumber: e.target.value })}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
             </motion.div>
@@ -161,7 +161,7 @@ export const Modal = () => {
           الدخول كمسؤول نظام
         </Link>
         
-        <p className="mt-4 text-xs text-gray-500 max-w-sm">
+        <p className="mt-4 text-xs text-gray-300 max-w-sm">
           نضمن سرية معلوماتك ولا نشاركها مع أي جهات خارجية بأي شكل من الأشكال
         </p>
       </motion.div>

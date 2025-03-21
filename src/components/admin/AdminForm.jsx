@@ -45,8 +45,8 @@ export const AdminForm = () => {
         <Image
           src={yassin}
           alt="Al Yassin"
-          width={120}
-          height={120}
+          width={95}
+          height={95}
           className="rounded-full border-4 border-white shadow-xl"
           priority
         />
@@ -60,7 +60,7 @@ export const AdminForm = () => {
           animate={{ opacity: 1 }}
           className="w-full max-w-md p-4 bg-red-100 rounded-lg text-center"
         >
-          <h1 className='text-xl text-red-600'>خطأ في الشبكة، يرجى المحاولة مرة أخرى</h1>
+          <h1 className='text-lg text-red-600'>خطأ في الشبكة، يرجى المحاولة مرة أخرى</h1>
         </motion.div>
       ) : (
         <motion.form
@@ -70,10 +70,7 @@ export const AdminForm = () => {
           onSubmit={handleSubmit}
         >
           <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800">دخول المسؤولين</h1>
-            <p className="text-sm text-gray-600 mt-2">
-              نظام آمن ومشفّر لإدارة المحتوى
-            </p>
+            <h1 className="text-lg font-bold text-gray-800">دخول المسؤولين</h1>
           </div>
 
           {wrong && (
@@ -95,7 +92,7 @@ export const AdminForm = () => {
               type='text' 
               placeholder='اسم المستخدم' 
               name='username'
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-right"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-right"
               dir="rtl"
               required
               value={formData.username}
@@ -112,7 +109,7 @@ export const AdminForm = () => {
               type='password' 
               placeholder='كلمة المرور' 
               name='password' 
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-right"
+              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-right"
               dir="rtl"
               required
               value={formData.password}
@@ -126,7 +123,7 @@ export const AdminForm = () => {
           >
             <button 
               type='submit'
-              className="w-full bg-blue-600 text-white p-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="w-full bg-blue-600 text-white p-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
               تسجيل الدخول
             </button>
