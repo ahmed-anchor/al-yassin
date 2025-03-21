@@ -29,7 +29,7 @@ export const SinglePage = () => {
       const userSession = await getUserSession();
       const adminSession = await getAdminSession();
       if(!userSession && !adminSession) router.push('/userForm');
-    }, 1000);
+    }, 4000);
 
     return () => {
       cancelAnimationFrame(rafId);
