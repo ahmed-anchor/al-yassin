@@ -29,7 +29,7 @@ const lalezar = Lalezar({
 
 export const metadata = {
   title: "Al Yassin - الياسين",
-  description: "شركة الياسين لمولدات الطاقه الشمسيه و مواسير المياه والواح الطقه",
+  description: "شركة الياسين لمولدات الطاقه الشمسيه و مواسير المياه والواح الطاقه",
   openGraph: {
     title: "Al Yassin - الياسين",
     description: "شركة الياسين لمولدات الطاقه الشمسيه و مواسير المياه والواح الطاقه",
