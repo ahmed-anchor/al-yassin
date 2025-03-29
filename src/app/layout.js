@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Cairo, Lalezar } from "next/font/google"
-import { getUserSession, getAdminSession } from "../../lib/lib";
 import { Navbar } from "@/components/Navbar";
 import yassin from '../assets/al-yassin.jpg'
 
@@ -40,8 +39,7 @@ export const metadata = {
 
 
 export default async function RootLayout({ children }) {
-  const userSession = await getUserSession();
-  const adminSession = await getAdminSession();
+
   return (
     <html lang="ar" dir='ltr' >
       <body
