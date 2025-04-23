@@ -4,7 +4,6 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Spinner } from '../Spinner'
 import { useRouter } from 'next/navigation'
-import yassin from '../../assets/al-yassin.jpg'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -45,7 +44,7 @@ export const ChangeCredentials = () => {
         className="mb-8"
       >
         <Image
-          src={yassin}
+          src='/assets/al-yassin.jpg'
           alt="Al Yassin"
           width={95}
           height={95}
