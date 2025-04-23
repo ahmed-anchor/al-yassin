@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Spinner } from '../Spinner'
 import { motion } from 'framer-motion'
 import { BookButton } from './BookButton'
+import Link from 'next/link'
 
 export const Dashboard = () => {
   const [customers, setCustomers] = useState([])
@@ -70,7 +71,15 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 p-6">
-      <div className="max-w-6xl  mx-auto pt-20">
+      <div className="max-w-6xl mx-auto pt-20">
+        <div className='w-full h-fit pb-7 Lalezar flex gap-4 justify-center items-center'>
+          <Link href='/admin/postProduct' className=' p-4 bg-blue-400 text-white rounded-lg'>
+            اضف منتج جديد ؟ 
+          </Link>
+          <Link href='/admin/postProject' className=' p-4 bg-blue-400 text-white rounded-lg'>
+            اضف مشروع جديد ؟ 
+          </Link>
+        </div>
         {/* Error Display */}
         {isError && (
           <motion.div
