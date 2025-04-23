@@ -1,21 +1,12 @@
 'use client'
 import { motion } from "framer-motion";
-import faba1 from '../../assets/threes/faba/faba1.webp'
-import faba2 from '../../assets/threes/faba/faba2.webp'
-import faba3 from '../../assets/threes/faba/faba3.webp'
-import tokal1 from '../../assets/threes/tokal/tokal1.webp'
-import tokal2 from '../../assets/threes/tokal/tokal2.webp'
-import tokal3 from '../../assets/threes/tokal/tokal3.webp'
-
-
-
 export function Pipes({ params }) {
   const { id } = params;
 
   // Product configuration with Arabic text
   const products = {
     faba: {
-      images: [faba1, faba2, faba3],
+      images: ['/assets/threes/faba/faba1.webp', '/assets/threes/faba/faba2.webp', '/assets/threes/faba/faba3.webp'],
       name: "ماسورة ار سي فابا",
       description: `ماسورة أر سي فابا
  تكنولوجيا تركي بأيادي مصرية 
@@ -28,7 +19,7 @@ export function Pipes({ params }) {
 ملحوظة:-(تم عمل كافة الاختبارات طبقا للمواصفات العالمية)[مواسير "ار سي فابا—RC-FaB`,
     },
     tokal: {
-      images: [tokal1, tokal2, tokal3],
+      images: ['/assets/threes/tokal/tokal1.webp', '/assets/threes/tokal/tokal2.webp', '/assets/threes/tokal/tokal3.webp'],
       name: "ماسورة توكال",
       description: `ماسورة "تــــوكـــــال" الماسورة الاقوي ف مصر 
 ماسورة تكنولوجيا هندي بأيادي مصرية
@@ -59,7 +50,7 @@ export function Pipes({ params }) {
               transition={{ duration: 0.3 }}
             >
               <img
-                src={img.src} // Make sure to use .src if using Next.js Image
+                src={img} // Make sure to use .src if using Next.js Image
                 alt={`${name} - عرض ${index + 1}`}
                 className="w-full h-full object-cover rounded-lg"
                 onError={(e) => {

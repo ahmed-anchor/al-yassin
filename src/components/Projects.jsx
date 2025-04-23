@@ -2,12 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import astOne from '../assets/astone.webp';
-import astTow from '../assets/asttow.webp';
-import astThree from '../assets/astthree.webp';
 import Link from 'next/link';
 
-const images = [astOne, astTow, astThree];
+const images = ['/assets/astone.webp', '/assets/asttow.webp', '/assets/astthree.webp'];
 
 export const Projects = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

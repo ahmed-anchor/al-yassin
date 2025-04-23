@@ -1,27 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image"; // Use Next.js Image component for optimized images
-import faba from "../assets/faba.webp";
-import delixi from "../assets/delixi.png";
-import tokal from "../assets/tokal.png";
-import jasolar from "../assets/ja-solar.webp";
 // Sample data for the carousel
 const carouselItems = [
   {
     id: 1,
-    image: faba,
+    // image: faba,
   },
   {
     id: 2,
-    image: delixi,
+    // image: delixi,
   },
   {
     id: 3,
-    image: tokal,
+    // image: tokal,
   },
   {
     id: 4,
-    image: jasolar,
+    // image: jasolar,
   },
 ];
 
@@ -69,7 +65,7 @@ export const Carousel = () => {
             className="flex-shrink-0 sm:w-[310px] sm:h-[120px] w-[250px] h-[100px] mx-9 sm:mx-24" // Bigger gap (mx-10) and fixed size
           >
             <Image
-              src={item.image}
+              src={'/assets/logos/faba.webp'}
               alt={`Carousel Image ${item.id}`}
               width={800} // Adjust based on your image dimensions
               height={400} // Adjust based on your image dimensions

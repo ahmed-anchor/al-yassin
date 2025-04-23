@@ -1,4 +1,3 @@
-import React from 'react';
 import { getSession } from '../../../lib/lib';
 import { AdminForm } from '@/components/admin/AdminForm';
 import { Dashboard } from '@/components/admin/Dashboard';

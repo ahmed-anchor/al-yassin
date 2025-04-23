@@ -3,35 +3,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
-import faba from "../assets/pipes/faba-pipe.webp";
-import tokal from "../assets/pipes/tokal-pipe.webp";
-import jasolar from "../assets/solar-plates/ja-solar-plate.webp";
-import jingo from "../assets/solar-plates/jingo-plate.webp";
-import trina from "../assets/solar-plates/trina-solar.webp";
-import max_motor from "../assets/motors/max-motor.webp";
-import delexi from "../assets/inverter/delexi-inverter.webp";
-import himel from "../assets/inverter/himel-inverter.webp";
-import invt from "../assets/inverter/invt-inverter.webp";
-import veichi from "../assets/inverter/veichi-inverter.webp";
-import dc from "../assets/cables/dc.webp";
-import bahhari from "../assets/cables/bahhari.webp";
-import puna from "../assets/motors/puna-motor.webp";
-
 
 const products = [
-  faba,
-  trina,
-  tokal,
-  jasolar,
-  veichi,
-  delexi,
-  jingo,
-  himel,
-  max_motor,
-  invt,
-  dc,
-  bahhari,
-  puna,
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
+  '/assets/pipes/faba-pipe.webp',
 ];
 
 export function Products() {
@@ -60,7 +46,7 @@ export function Products() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src={src}
+              src={'/assets/pipes/faba-pipe.webp'}
               alt={`Product ${index + 1}`}
               fill
               className="object-cover"

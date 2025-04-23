@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Cairo, Lalezar } from "next/font/google"
 import { Navbar } from "@/components/Navbar";
-import yassin from '../assets/al-yassin.jpg'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Al Yassin - الياسين",
     description: "شركة الياسين لمولدات الطاقه الشمسيه و مواسير المياه والواح الطاقه",
-    images: [{url: yassin.src}],
+    images: [{url: 'assets/al-yassin.jpg'}],
   },
 };
 
@@ -43,7 +42,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ar" dir='ltr' >
       <body
-        className={`bg-[url('../assets/solar-plate2.jpg')] bg-cover bg-fixed bg-bottom
+        className={`bg-[url('/assets/solar-plate2.jpg')] bg-cover bg-fixed bg-bottom
           ${geistSans.variable} ${cairo.variable} ${lalezar.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />

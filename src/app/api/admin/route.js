@@ -25,7 +25,7 @@ export async function POST(req) {
     const token = v4();
 
     // Update admin token
-    const updatedAdmin = await AdminModel.findByIdAndUpdate(
+    await AdminModel.findByIdAndUpdate(
       admin._id,
       { $set: { token } },
       { new: true }
@@ -33,13 +33,13 @@ export async function POST(req) {
 
     // Set cookies
     cookies().set('session', token, { 
-      expires: new Date(Date.now() + 60 * 60 * 1000),
+      expires: new Date(Date.now() + 4 * 60 * 60 * 1000),
       httpOnly: true,
       sameSite: 'strict',
       secure: true
     });
     
-    cookies().set('adminSession', 'true', { 
+    cookies().set('adminSession', 'true', {
       expires: new Date(Date.now() + 12 * 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
       sameSite: 'strict'
