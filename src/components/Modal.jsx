@@ -5,7 +5,6 @@ import { Spinner } from './Spinner';
 import Link from 'next/link';
 import axios from 'axios';
 import Image from 'next/image';
-import yassin from '../assets/al-yassin.jpg';
 import { motion } from 'framer-motion';
 import { setUserSession } from '../../lib/lib';
 
@@ -60,7 +59,7 @@ export const Modal = () => {
         className="mb-8"
       >
         <Image
-          src={yassin}
+          src='/assets/al-yassin.jpg'
           alt="Al Yassin"
           width={95}
           height={95}
