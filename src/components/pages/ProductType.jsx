@@ -2,7 +2,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { Spinner } from '@/components/Spinner'
-import { setUserSession } from '../../../lib/lib'
+import { setUserSession, getSession } from '../../../lib/lib'
 import { motion } from 'framer-motion'
 import axios from 'axios'
 import Image from 'next/image'
@@ -13,12 +13,14 @@ export function ProductType({ id }) {
   const [isLoading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [isError, setError] = useState(false);
+  const [isAuthed, setIsAuthed] = useState(false);
 
   const getProducts = async () => {
     setLoading(true)
     try {
-
-    const response = await axios.post('/api/getProduct' , { productType: id });
+      const session = await getSession();
+      setIsAuthed(session);
+      const response = await axios.post('/api/getProduct' , { productType: id });
       setProducts(response.data);
     } catch (error) {
       setError(error.message);
@@ -65,7 +67,7 @@ export function ProductType({ id }) {
             <div
               key={product._id}
             >
-              <DeleteProduct _id={product._id} refresh={getProducts} />
+              {isAuthed && <DeleteProduct id={product._id} />}
               <motion.div
                 variants={{
                   hidden: { opacity: 0, scale: 0.8 },
@@ -78,7 +80,6 @@ export function ProductType({ id }) {
                   <Image
                     src={product.image}
                     alt={product.name}
-                    fill
                     className="object-cover transition-transform duration-300 hover:scale-110"
                     priority={index < 3}
                   />
