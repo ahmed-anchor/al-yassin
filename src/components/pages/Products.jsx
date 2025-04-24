@@ -8,6 +8,7 @@ import axios from 'axios'
 import Image from 'next/image'
 import { Footer } from '@/components/Footer'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export function Products() {
   const [isLoading, setLoading] = useState(false);
@@ -32,38 +33,41 @@ export function Products() {
   }
   , [])
 
+//   <div className="flex justify-center items-center h-screen">
+//   <Spinner />
+// </div>
+
   return (
     <>
       <div className="min-h-screen bg-gray-100 pb-12 pt-28 px-4 sm:px-6 lg:px-8 overflow-hidden font-lalezar" dir="rtl">
-        {
-          isLoading ? <div className="flex justify-center items-center h-screen"><Spinner /></div>:
-          <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-7xl mx-auto"
-        >
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  delayChildren: 0.001,
-                  staggerChildren: 0.001
-                }
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto"
+      >
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delayChildren: 0.001,
+                staggerChildren: 0.001
               }
-            }}
-          >
-          {
-          isError? <div className="text-red-500 text-center">{isError}</div>:
-            products.map((product) => (
+            }
+          }}
+        >
+        {
+        isError? <div className="text-red-500 text-center">{isError}</div>:
+          products.map((product) => (
+            <Suspense key={product._id} fallback={<Spinner />}>
               <Link 
-              key={product._id}
-              href={`/products/${!product.categoryName?['faba','tokal'].includes(product.productType)?product.productType:"":product.productType}`}>
+
+                href={`/products/${!product.categoryName?['faba','tokal'].includes(product.productType)?product.productType:"":product.productType}`}>
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
@@ -76,7 +80,7 @@ export function Products() {
                     <Image
                       src={product.image}
                       alt={product.name}
-
+                      fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
                       // priority={index < 3}
                     />
@@ -89,10 +93,10 @@ export function Products() {
                   </div>
                 </motion.div>
               </Link>
-            ))}
-          </motion.div>
+            </Suspense>
+          ))}
         </motion.div>
-        }
+      </motion.div>
       </div>
       <Footer />
     </>

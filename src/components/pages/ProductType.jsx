@@ -80,6 +80,7 @@ export function ProductType({ id }) {
                   <Image
                     src={product.image}
                     alt={product.name}
+                    fill
                     className="object-cover transition-transform duration-300 hover:scale-110"
                     priority={index < 3}
                   />
