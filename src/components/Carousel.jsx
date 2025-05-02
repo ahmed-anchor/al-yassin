@@ -5,19 +5,19 @@ import Image from "next/image"; // Use Next.js Image component for optimized ima
 const carouselItems = [
   {
     id: 1,
-    // image: faba,
+    image: '/assets/logos/faba.webp',
   },
   {
     id: 2,
-    // image: delixi,
+    image: '/assets/logos/delixi.png',
   },
   {
     id: 3,
-    // image: tokal,
+    image: '/assets/logos/tokal.png',
   },
   {
     id: 4,
-    // image: jasolar,
+    image: '/assets/logos/ja-solar.webp',
   },
 ];
 
@@ -65,7 +65,7 @@ export const Carousel = () => {
             className="flex-shrink-0 sm:w-[310px] sm:h-[120px] w-[250px] h-[100px] mx-9 sm:mx-24" // Bigger gap (mx-10) and fixed size
           >
             <Image
-              src={'/assets/logos/faba.webp'}
+              src={item.image}
               alt={`Carousel Image ${item.id}`}
               width={800} // Adjust based on your image dimensions
               height={400} // Adjust based on your image dimensions

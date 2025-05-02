@@ -63,7 +63,6 @@ export default function ProductForm() {
     try {
     const response = await axios.post('/api/getProduct' , { productType: '' })
       setProducts(response.data);
-      console.log(response.data);
       setProductType(response.data[0]?.productType);
       setLoadingProducts(false);
     } catch (error) {

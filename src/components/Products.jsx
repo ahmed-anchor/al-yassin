@@ -5,19 +5,19 @@ import { useRef } from "react";
 import Link from "next/link";
 
 const products = [
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
-  '/assets/pipes/faba-pipe.webp',
+  '/assets/faba/faba-pipe.webp',
+  '/assets/inverters/delexi-inverter.webp',
+  '/assets/tolombat/ferat.webp',
+  '/assets/tokal/tokal-pipe.webp',
+  '/assets/inverters/himel-inverter.webp',
+  '/assets/tolombat/nafora.webp',
+  '/assets/solar-plates/jingo-plate.webp',
+  '/assets/inverters/veichi-inverter.webp',
+  '/assets/motors/max-motor.webp',
+  '/assets/solar-plates/trina-solar.webp',
+  '/assets/motors/puna-motor.webp',
+  '/assets/motors/ferat-motor.webp',
+  '/assets/solar-plates/ja-solar-plate.webp',
 ];
 
 export function Products() {
@@ -46,7 +46,7 @@ export function Products() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src={'/assets/pipes/faba-pipe.webp'}
+              src={src}
               alt={`Product ${index + 1}`}
               fill
               className="object-cover"
