@@ -120,7 +120,11 @@ export default function ProductForm() {
                 type="checkbox"
                 className="peer sr-only"
                 checked={isCustom}
-                onChange={(e)=>setIsCustom(e.target.checked)}
+                onChange={(e)=>{
+                  setIsCustom(e.target.checked)
+                  if(!e.target.checked) return
+                  setAddAsNew(e.target.checked)
+                }}
               />
               <div className="w-12 h-6 bg-blue-400 border-0 rounded-full peer-checked:bg-white peer-checked:border-[1px] border-gray-400 transition-colors" />
               <div className="absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-all peer-checked:translate-x-6 peer-checked:bg-gray-700" />
@@ -178,7 +182,7 @@ export default function ProductForm() {
                 >
                   {
                     products?.map((type) => (
-                      type.productType &&
+                      type.categoryName &&
                       <option key={type._id} value={type.productType.replace(/-/g, ' ') }>
                         {type.productType.replace(/-/g, ' ')}
                       </option>

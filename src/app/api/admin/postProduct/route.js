@@ -13,12 +13,6 @@ import fs from "fs/promises";
 
 export async function POST(req) {
   try {
-    // if(req.headers.get("Content-type") !== "multipart/form-data") {
-    //   return NextResponse.json(
-    //     { message: "Invalid content type" },
-    //     { status: 400 }
-    //   );
-    // }
     // checking if the user is authenticated
     const session = await getSession();
     if (!session) {

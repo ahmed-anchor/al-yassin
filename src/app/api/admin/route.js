@@ -33,14 +33,14 @@ export async function POST(req) {
 
     // Set cookies
     cookies().set('session', token, { 
-      expires: new Date(Date.now() + 4 * 60 * 60 * 1000),
+      expires: new Date(Date.now() + 4 * 60 * 60 * 1000), // 4 hours
       httpOnly: true,
       sameSite: 'strict',
       secure: true
     });
     
     cookies().set('adminSession', 'true', {
-      expires: new Date(Date.now() + 12 * 30 * 24 * 60 * 60 * 1000),
+      expires: new Date(Date.now() + 12 * 30 * 24 * 60 * 60 * 1000), // 12 months
       httpOnly: true,
       sameSite: 'strict'
     });
