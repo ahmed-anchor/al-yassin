@@ -53,13 +53,13 @@ export async function POST(req) {
     
     const fileName = transliterate(name)
     const cleanedFileName = cleanString(fileName)+".webp";
-    const filePath = path.join(process.cwd(), "public", "assets", 'projects',cleanedFileName)
+    const filePath = path.join(process.cwd(), "public", 'projects',cleanedFileName)
     await writeFile(filePath, outputBuffer);
 
     await ProjectModel.create({
       name,
       description,
-      image: `/assets/projects/${cleanedFileName}`,
+      image: `/projects/${cleanedFileName}`,
     });
 
 
