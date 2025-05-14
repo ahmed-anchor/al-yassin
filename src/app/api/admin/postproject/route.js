@@ -54,12 +54,12 @@ export async function POST(req) {
     
     const fileName = transliterate(name)
     const cleanedFileName = cleanString(fileName)+".webp";
-    const filePath = path.join(process.cwd(), "public", 'projects',cleanedFileName)
-    await writeFile(filePath, outputBuffer);
+    // const filePath = path.join(process.cwd(), "public", 'projects',cleanedFileName)
+    // await writeFile(filePath, outputBuffer);
 
     // Upload to Vercel Blob
     const { url } = await put(
-      `projects/${Date.now()}-${cleanString(name)}.webp`,
+      `projects/${Date.now()}-${cleanedFileName}.webp`,
       outputBuffer,
       { access: 'public' }
     );
