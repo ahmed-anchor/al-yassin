@@ -56,12 +56,12 @@ export async function POST(req) {
     const filePath = path.join(process.cwd(), "public", "assets", 'projects',cleanedFileName)
     await writeFile(filePath, outputBuffer);
 
-
     await ProjectModel.create({
       name,
       description,
       image: `/assets/projects/${cleanedFileName}`,
     });
+
 
     return NextResponse.json(
       { message: "Uploaded successfully" },
