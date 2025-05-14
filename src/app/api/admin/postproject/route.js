@@ -7,6 +7,7 @@ import path from "path";
 import { getSession } from "../../../../../lib/lib";
 import { transliterate } from "transliteration";
 import { NextResponse } from "next/server";
+import { put } from "@vercel/blob";
 
 
 export async function POST(req) {
@@ -56,10 +57,18 @@ export async function POST(req) {
     const filePath = path.join(process.cwd(), "public", 'projects',cleanedFileName)
     await writeFile(filePath, outputBuffer);
 
+    // Upload to Vercel Blob
+    const { url } = await put(
+      `projects/${Date.now()}-${cleanString(name)}.webp`,
+      outputBuffer,
+      { access: 'public' }
+    );
+
+
     await ProjectModel.create({
       name,
       description,
-      image: `/projects/${cleanedFileName}`,
+      image: url,
     });
 
 
