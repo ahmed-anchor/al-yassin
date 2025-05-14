@@ -7,7 +7,7 @@ import path from "path";
 import { getSession } from "../../../../../lib/lib";
 import { transliterate } from "transliteration";
 import { NextResponse } from "next/server";
-import { put } from "@vercel/blob";
+import { put, del } from "@vercel/blob";
 
 
 export async function POST(req) {
@@ -59,7 +59,7 @@ export async function POST(req) {
 
     // Upload to Vercel Blob
     const { url } = await put(
-      `projects/${Date.now()}-${cleanedFileName}.webp`,
+      `projects/${Date.now()}-${cleanedFileName}`,
       outputBuffer,
       { access: 'public' }
     );
@@ -122,6 +122,22 @@ export async function DELETE(req) {
         { status: 404 }
       );
     }
+
+    if(project.image.startsWith("https://")) {
+      // Delete from Vercel Blob
+      await del(project.image); // Uses the stored blob URL
+
+      await ProjectModel.findByIdAndDelete(_id);
+      
+      return NextResponse.json(
+        { message: "Project deleted successfully" },
+        { status: 200 }
+      );
+
+    }
+    
+
+
     const filePath = path.join(process.cwd(), "public", project.image);
     await unlink(filePath)
     .then(() => {

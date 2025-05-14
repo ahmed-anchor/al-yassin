@@ -9,7 +9,7 @@ import { transliterate } from "transliteration";
 import { mkdirSync } from "fs";
 import { unlink } from "fs/promises";
 import { rm } from "fs/promises";
-import fs from "fs/promises";
+import { del } from "@vercel/blob";
 
 export async function POST(req) {
   try {
@@ -136,6 +136,7 @@ export async function DELETE(req) {
     await connectDB();
 
     // Find and delete product first
+    
     const product = await ProductModel.findByIdAndDelete(_id);
     if (!product) {
       return NextResponse.json(
@@ -144,10 +145,20 @@ export async function DELETE(req) {
       );
     }
 
+    if(product.image.startWith('https://')) {
+      await del(product.image)
+
+
+      return NextResponse.json(
+      { message: "Product and associated files deleted" },
+      { status: 200 }
+    );
+    }
+
     // Delete associated file
     try {
       const filePath = path.join(process.cwd(), "public", product.image);
-      await fs.unlink(filePath);
+      await unlink(filePath);
     } catch (fileError) {
       console.error("File deletion error:", fileError);
       // Continue even if file deletion fails
@@ -170,7 +181,7 @@ export async function DELETE(req) {
           sanitizedType
         );
 
-        await fs.rm(uploadsDir, {
+        await rm(uploadsDir, {
           recursive: true,
           force: true,
           maxRetries: 3
